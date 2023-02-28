@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>MyBlog</title>
+        <link>http://example.org/</link>
+        <description>this man is really lazy and nothing is left.</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2369187058@qq.com (fhawk)</managingEditor>
+            <webMaster>2369187058@qq.com (fhawk)</webMaster><lastBuildDate>Tue, 28 Feb 2023 06:42:29 &#43;0800</lastBuildDate>
+            <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Ubuntu Install Fonts</title>
+    <link>http://example.org/posts/ubuntu-install-fonts/</link>
+    <pubDate>Tue, 28 Feb 2023 06:42:29 &#43;0800</pubDate>
+    <author>fhawk</author>
+    <guid>http://example.org/posts/ubuntu-install-fonts/</guid>
+    <description><![CDATA[1.安装mkfontscale,mkfontdir,fc-cache命令 如果运行mkfontscale命令时提示mkfontscale: command not]]></description>
+</item>
+</channel>
+</rss>
