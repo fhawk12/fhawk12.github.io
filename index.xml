@@ -4,9 +4,25 @@
         <link>http://example.org/</link>
         <description>this man is really lazy and nothing is left.</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2369187058@qq.com (fhawk)</managingEditor>
-            <webMaster>2369187058@qq.com (fhawk)</webMaster><lastBuildDate>Tue, 28 Feb 2023 06:42:29 &#43;0800</lastBuildDate>
+            <webMaster>2369187058@qq.com (fhawk)</webMaster><lastBuildDate>Tue, 28 Feb 2023 19:28:03 &#43;0800</lastBuildDate>
             <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Ubuntu Install the Latest Version Nodejs</title>
+    <link>http://example.org/posts/ubuntu-install-the-latest-version-nodejs/</link>
+    <pubDate>Tue, 28 Feb 2023 19:28:03 &#43;0800</pubDate>
+    <author>fhawk</author>
+    <guid>http://example.org/posts/ubuntu-install-the-latest-version-nodejs/</guid>
+    <description><![CDATA[方法一 下载并执行NodeSource安装脚本 curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash - 这个脚本将会添加 NodeSource 的签名 key 到你的系统，创建一个 apt 源文件，安装必备的软件包，并且刷]]></description>
+</item>
+<item>
+    <title>Ubuntu Install the Latest Version Neovim</title>
+    <link>http://example.org/posts/ubuntu-install-the-latest-version-neovim/</link>
+    <pubDate>Tue, 28 Feb 2023 19:13:34 &#43;0800</pubDate>
+    <author>fhawk</author>
+    <guid>http://example.org/posts/ubuntu-install-the-latest-version-neovim/</guid>
+    <description><![CDATA[首先，如果没有安装PPA的话，先安装： PPA &ndash; Personal Package Archive, 个人包档案 sudo apt install software-properties-common 然后用以下命令安装Neovim sudo apt-add-repository ppa:neovim-ppa/stable sudo apt update sudo apt install neovim]]></description>
+</item>
+<item>
     <title>Ubuntu Install Fonts</title>
     <link>http://example.org/posts/ubuntu-install-fonts/</link>
     <pubDate>Tue, 28 Feb 2023 06:42:29 &#43;0800</pubDate>

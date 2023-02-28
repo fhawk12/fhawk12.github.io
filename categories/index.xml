@@ -4,10 +4,10 @@
         <link>http://example.org/categories/</link>
         <description>Categories - Category - MyBlog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2369187058@qq.com (fhawk)</managingEditor>
-            <webMaster>2369187058@qq.com (fhawk)</webMaster><lastBuildDate>Tue, 28 Feb 2023 06:42:29 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>2369187058@qq.com (fhawk)</webMaster><lastBuildDate>Tue, 28 Feb 2023 19:28:03 &#43;0800</lastBuildDate><atom:link href="http://example.org/categories/" rel="self" type="application/rss+xml" /><item>
     <title>settings</title>
     <link>http://example.org/categories/settings/</link>
-    <pubDate>Tue, 28 Feb 2023 06:42:29 &#43;0800</pubDate>
+    <pubDate>Tue, 28 Feb 2023 19:28:03 &#43;0800</pubDate>
     <author>fhawk</author>
     <guid>http://example.org/categories/settings/</guid>
     <description><![CDATA[]]></description>
