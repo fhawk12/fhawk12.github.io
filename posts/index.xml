@@ -4,7 +4,15 @@
         <link>http://example.org/posts/</link>
         <description>All Posts | MyBlog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2369187058@qq.com (fhawk)</managingEditor>
-            <webMaster>2369187058@qq.com (fhawk)</webMaster><lastBuildDate>Tue, 28 Feb 2023 19:28:03 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>2369187058@qq.com (fhawk)</webMaster><lastBuildDate>Thu, 02 Mar 2023 21:14:35 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Terminal主题美化</title>
+    <link>http://example.org/posts/terminal%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</link>
+    <pubDate>Thu, 02 Mar 2023 21:14:35 &#43;0800</pubDate>
+    <author>fhawk</author>
+    <guid>http://example.org/posts/terminal%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</guid>
+    <description><![CDATA[Linux 安装 zsh, oh-my-zsh sudo apt install zsh sh -c &#34;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&#34; git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k # 主题powerlevel10k 在~/.zshrc中设置主题 ZSH_THEME=&#34;powerlevel10k/powerlevel10k&#34; 完成之后重新启动就可以设置选项，按照自己]]></description>
+</item>
+<item>
     <title>Ubuntu Install the Latest Version Nodejs</title>
     <link>http://example.org/posts/ubuntu-install-the-latest-version-nodejs/</link>
     <pubDate>Tue, 28 Feb 2023 19:28:03 &#43;0800</pubDate>

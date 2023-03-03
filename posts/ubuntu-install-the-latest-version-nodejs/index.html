@@ -18,7 +18,7 @@
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/ubuntu-install-the-latest-version-nodejs/" /><link rel="prev" href="http://example.org/posts/ubuntu-install-the-latest-version-neovim/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/ubuntu-install-the-latest-version-nodejs/" /><link rel="prev" href="http://example.org/posts/ubuntu-install-the-latest-version-neovim/" /><link rel="next" href="http://example.org/posts/terminal%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/example.org\/posts\/ubuntu-install-the-latest-version-nodejs\/"
-        },"genre": "posts","keywords": "ubuntu","wordcount":  225 ,
+        },"genre": "posts","keywords": "ubuntu","wordcount":  346 ,
         "url": "http:\/\/example.org\/posts\/ubuntu-install-the-latest-version-nodejs\/","datePublished": "2023-02-28T19:28:03+08:00","dateModified": "2023-02-28T19:28:03+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -103,7 +103,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Ubuntu Install the Latest Version Nodejs</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>fhawk</a></span>&nbsp;<span class="post-category">included in <a href="/categories/settings/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>settings</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-02-28">2023-02-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;225 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-02-28">2023-02-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;346 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="true">
                 <div class="details-summary toc-title">
@@ -127,10 +127,33 @@
 <p>如果你需要另外的 Node.js 版本，例如<code>12.x</code>，将<code>setup_18.x</code>修改为<code>setup_12.x</code></p>
 <pre tabindex="0"><code>sudo apt install nodejs
 </code></pre><p>nodejs软件包同时包含<code>node</code>和<code>npm</code>二进制包</p>
-<h3 id="方法二">方法二</h3>
+<p>如果遇到问题如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Preparing to unpack .../10-libsasl2-modules-db_2.1.27+dfsg2-3ubuntu1.2_amd64.deb ...
+</span></span><span class="line"><span class="cl">Unpacking libsasl2-modules-db:amd64 (2.1.27+dfsg2-3ubuntu1.2) over (2.1.27+dfsg2-3ubuntu1.1) ...
+</span></span><span class="line"><span class="cl">Preparing to unpack .../11-libsasl2-2_2.1.27+dfsg2-3ubuntu1.2_amd64.deb ...
+</span></span><span class="line"><span class="cl">Unpacking libsasl2-2:amd64 (2.1.27+dfsg2-3ubuntu1.2) over (2.1.27+dfsg2-3ubuntu1.1) ...
+</span></span><span class="line"><span class="cl">Preparing to unpack .../12-libsasl2-modules_2.1.27+dfsg2-3ubuntu1.2_amd64.deb ...
+</span></span><span class="line"><span class="cl">Unpacking libsasl2-modules:amd64 (2.1.27+dfsg2-3ubuntu1.2) over (2.1.27+dfsg2-3ubuntu1.1) ...
+</span></span><span class="line"><span class="cl">Preparing to unpack .../13-nodejs_18.14.2-deb-1nodesource1_amd64.deb ...
+</span></span><span class="line"><span class="cl">Unpacking nodejs (18.14.2-deb-1nodesource1) over (12.22.9~dfsg-1ubuntu3) ...
+</span></span><span class="line"><span class="cl">dpkg: error processing archive /tmp/apt-dpkg-install-bB9ve3/13-nodejs_18.14.2-deb-1nodesource1_amd64.deb (--unpack):
+</span></span><span class="line"><span class="cl"> trying to overwrite &#39;/usr/share/systemtap/tapset/node.stp&#39;, which is also in package libnode72:amd64 12.22.9~dfsg-1ubuntu3
+</span></span><span class="line"><span class="cl">Preparing to unpack .../14-software-properties-common_0.99.22.6_all.deb ...
+</span></span><span class="line"><span class="cl">Unpacking software-properties-common (0.99.22.6) over (0.99.22.5) ...
+</span></span><span class="line"><span class="cl">Preparing to unpack .../15-python3-software-properties_0.99.22.6_all.deb ...
+</span></span><span class="line"><span class="cl">Unpacking python3-software-properties (0.99.22.6) over (0.99.22.5) ...
+</span></span><span class="line"><span class="cl">Errors were encountered while processing:
+</span></span><span class="line"><span class="cl"> /tmp/apt-dpkg-install-bB9ve3/13-nodejs_18.14.2-deb-1nodesource1_amd64.deb
+</span></span><span class="line"><span class="cl">E: Sub-process /usr/bin/dpkg returned an error code (1)
+</span></span></code></pre></div><p>解决方法：</p>
+<pre tabindex="0"><code>cd /var/lib/dpkg 
+sudo mv info info.bak 
+sudo apt-get update
+</code></pre><h3 id="方法二">方法二</h3>
 <h4 id="安装n管理器来管理nodejs版本">安装n管理器来管理nodejs版本</h4>
 <pre tabindex="0"><code>sudo apt install nodejs
-sudo npm install n -g
+sudo npm install -g n --force
 sudo n stable # 安装最新版的nodejs(stable版本)
 sudo n 5.1.0  # 安装指定版本的nodejs(5.1.0)
 </code></pre></div><div class="post-footer" id="post-footer">
@@ -154,7 +177,8 @@ sudo n 5.1.0  # 安装指定版本的nodejs(5.1.0)
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/ubuntu-install-the-latest-version-neovim/" class="prev" rel="prev" title="Ubuntu Install the Latest Version Neovim"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Ubuntu Install the Latest Version Neovim</a></div>
+    <div class="post-nav"><a href="/posts/ubuntu-install-the-latest-version-neovim/" class="prev" rel="prev" title="Ubuntu Install the Latest Version Neovim"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Ubuntu Install the Latest Version Neovim</a>
+            <a href="/posts/terminal%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/" class="next" rel="next" title="Terminal主题美化">Terminal主题美化<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
@@ -168,5 +192,5 @@ sudo n 5.1.0  # 安装指定版本的nodejs(5.1.0)
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
