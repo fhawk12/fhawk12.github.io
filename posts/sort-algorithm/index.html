@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Sort Algorithm :: fhawk&#39;s blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content=" " />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://fhawk12.github.io/posts/sort-algorithm/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://fhawk12.github.io/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://fhawk12.github.io/img/theme-colors/rose-pine.png">
+  <link rel="apple-touch-icon" href="https://fhawk12.github.io/img/theme-colors/rose-pine.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Sort Algorithm">
+<meta property="og:description" content=" " />
+<meta property="og:url" content="https://fhawk12.github.io/posts/sort-algorithm/" />
+<meta property="og:site_name" content="fhawk&#39;s blog" />
+
+  
+    <meta property="og:image" content="https://fhawk12.github.io/img/favicon/rose-pine.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2023-11-04 19:39:46 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="rose-pine">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Home
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/tags">Tags</a></li>
+        
+      
+        
+          <li><a href="/posts/algorithm-template">Template</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/tags" >Tags</a></li>
+        
+      
+        
+          <li><a href="/posts/algorithm-template" >Template</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://fhawk12.github.io/posts/sort-algorithm/">Sort Algorithm</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2023-11-04</time></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://fhawk12.github.io/tags/algorithm/">algorithm</a>&nbsp;
+      
+      #<a href="https://fhawk12.github.io/tags/template/">template</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        Table of Contents
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#bubble-sort">Bubble Sort</a></li>
+    <li><a href="#insertion-sort">Insertion Sort</a></li>
+    <li><a href="#shell-sort">Shell Sort</a></li>
+    <li><a href="#selection-sort">Selection Sort</a></li>
+    <li><a href="#quick-sort">Quick Sort</a></li>
+    <li><a href="#merge-sort">Merge Sort</a></li>
+    <li><a href="#radix-sort">Radix Sort</a></li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <h2 id="bubble-sort">Bubble Sort<a href="#bubble-sort" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">bubbleSort</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> arr.size(); i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; j <span style="color:#f92672">&lt;</span> arr.size(); j<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (arr[i] <span style="color:#f92672">&gt;</span> arr[j])
+</span></span><span style="display:flex;"><span>        swap(arr[i], arr[j]);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">swap</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">&amp;</span>a, <span style="color:#66d9ef">int</span> <span style="color:#f92672">&amp;</span>b) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> t <span style="color:#f92672">=</span> a;
+</span></span><span style="display:flex;"><span>  a <span style="color:#f92672">=</span> b;
+</span></span><span style="display:flex;"><span>  b <span style="color:#f92672">=</span> t;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="insertion-sort">Insertion Sort<a href="#insertion-sort" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insertionSort</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;</span> arr.size(); i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> key <span style="color:#f92672">=</span> arr[i];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (j <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> arr[j] <span style="color:#f92672">&gt;</span> key) {
+</span></span><span style="display:flex;"><span>      arr[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> arr[j];
+</span></span><span style="display:flex;"><span>      j<span style="color:#f92672">--</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    arr[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> key;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="shell-sort">Shell Sort<a href="#shell-sort" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">shellSort</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> arr.size();
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Start with a large gap and reduce it over each iteration
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> gap <span style="color:#f92672">=</span> n <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>; gap <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>; gap <span style="color:#f92672">/=</span> <span style="color:#ae81ff">2</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Perform an insertion sort for elements at a given gap
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> gap; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> arr[i];
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">int</span> j;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">for</span> (j <span style="color:#f92672">=</span> i; j <span style="color:#f92672">&gt;=</span> gap <span style="color:#f92672">&amp;&amp;</span> arr[j <span style="color:#f92672">-</span> gap] <span style="color:#f92672">&gt;</span> temp; j <span style="color:#f92672">-=</span> gap) {
+</span></span><span style="display:flex;"><span>        arr[j] <span style="color:#f92672">=</span> arr[j <span style="color:#f92672">-</span> gap];
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      arr[j] <span style="color:#f92672">=</span> temp;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="selection-sort">Selection Sort<a href="#selection-sort" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">selectionSort</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> arr.size() <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> min_index <span style="color:#f92672">=</span> i;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; j <span style="color:#f92672">&lt;</span> arr.size(); j<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (arr[j] <span style="color:#f92672">&lt;</span> arr[min_index]) {
+</span></span><span style="display:flex;"><span>        min_index <span style="color:#f92672">=</span> j;
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (min_index <span style="color:#f92672">!=</span> i) {
+</span></span><span style="display:flex;"><span>      swap(arr[i], arr[min_index]);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="quick-sort">Quick Sort<a href="#quick-sort" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">partition</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>arr, <span style="color:#66d9ef">int</span> l, <span style="color:#66d9ef">int</span> r) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> arr[l];
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">while</span> (l <span style="color:#f92672">&lt;</span> r) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (l <span style="color:#f92672">&lt;</span> r <span style="color:#f92672">&amp;&amp;</span> arr[r] <span style="color:#f92672">&gt;=</span> mid) r<span style="color:#f92672">--</span>;
+</span></span><span style="display:flex;"><span>    arr[l] <span style="color:#f92672">=</span> arr[r];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (l <span style="color:#f92672">&lt;</span> r <span style="color:#f92672">&amp;&amp;</span> arr[l] <span style="color:#f92672">&lt;=</span> mid) l<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    arr[r] <span style="color:#f92672">=</span> arr[l];
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  arr[l] <span style="color:#f92672">=</span> mid;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> l;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">quickSort</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>arr, <span style="color:#66d9ef">int</span> l, <span style="color:#66d9ef">int</span> r) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (l <span style="color:#f92672">&lt;</span> r) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> pivot <span style="color:#f92672">=</span> partition(arr, l, r);
+</span></span><span style="display:flex;"><span>    quickSort(arr, l, pivot <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    quickSort(arr, pivot <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, r);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">quickSort</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>arr) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> arr.size();
+</span></span><span style="display:flex;"><span>  quickSort(arr, <span style="color:#ae81ff">0</span>, n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="merge-sort">Merge Sort<a href="#merge-sort" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">merge</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>arr, <span style="color:#66d9ef">int</span> left, <span style="color:#66d9ef">int</span> middle, <span style="color:#66d9ef">int</span> right) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> n1 <span style="color:#f92672">=</span> middle <span style="color:#f92672">-</span> left <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> n2 <span style="color:#f92672">=</span> right <span style="color:#f92672">-</span> middle;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> leftArr(n1);
+</span></span><span style="display:flex;"><span>  vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> rightArr(n2);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n1; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    leftArr[i] <span style="color:#f92672">=</span> arr[left <span style="color:#f92672">+</span> i];
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n2; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    rightArr[i] <span style="color:#f92672">=</span> arr[middle <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> i];
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> left;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">while</span> (i <span style="color:#f92672">&lt;</span> n1 <span style="color:#f92672">&amp;&amp;</span> j <span style="color:#f92672">&lt;</span> n2) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (leftArr[i] <span style="color:#f92672">&lt;=</span> rightArr[j]) {
+</span></span><span style="display:flex;"><span>      arr[k] <span style="color:#f92672">=</span> leftArr[i];
+</span></span><span style="display:flex;"><span>      i<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>      arr[k] <span style="color:#f92672">=</span> rightArr[j];
+</span></span><span style="display:flex;"><span>      j<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    k<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">while</span> (i <span style="color:#f92672">&lt;</span> n1) {
+</span></span><span style="display:flex;"><span>    arr[k] <span style="color:#f92672">=</span> leftArr[i];
+</span></span><span style="display:flex;"><span>    i<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    k<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">while</span> (j <span style="color:#f92672">&lt;</span> n2) {
+</span></span><span style="display:flex;"><span>    arr[k] <span style="color:#f92672">=</span> rightArr[j];
+</span></span><span style="display:flex;"><span>    j<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    k<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">mergeSort</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>arr, <span style="color:#66d9ef">int</span> left, <span style="color:#66d9ef">int</span> right) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (left <span style="color:#f92672">&lt;</span> right) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> middle <span style="color:#f92672">=</span> left <span style="color:#f92672">+</span> (right <span style="color:#f92672">-</span> left) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    mergeSort(arr, left, middle);
+</span></span><span style="display:flex;"><span>    mergeSort(arr, middle <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, right);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    merge(arr, left, middle, right);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">mergeSort</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>arr) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> arr.size();
+</span></span><span style="display:flex;"><span>  mergeSort(arr, <span style="color:#ae81ff">0</span>, n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="radix-sort">Radix Sort<a href="#radix-sort" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getMaxValue</span>(<span style="color:#66d9ef">const</span> vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>arr) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#f92672">*</span>max_element(arr.begin(), arr.end());
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">countSort</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>arr, <span style="color:#66d9ef">int</span> exp) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> arr.size();
+</span></span><span style="display:flex;"><span>  vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> output(n);
+</span></span><span style="display:flex;"><span>  vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> count(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> digit <span style="color:#f92672">=</span> (arr[i] <span style="color:#f92672">/</span> exp) <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>    count[digit]<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    count[i] <span style="color:#f92672">+=</span> count[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>; i<span style="color:#f92672">--</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> digit <span style="color:#f92672">=</span> (arr[i] <span style="color:#f92672">/</span> exp) <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>    output[count[digit] <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> arr[i];
+</span></span><span style="display:flex;"><span>    count[digit]<span style="color:#f92672">--</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  copy(output.begin(), output.end(), arr.begin());
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">radixSort</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>arr) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> maxVal <span style="color:#f92672">=</span> getMaxValue(arr);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> exp <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; maxVal <span style="color:#f92672">/</span> exp <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>; exp <span style="color:#f92672">*=</span> <span style="color:#ae81ff">10</span>) {
+</span></span><span style="display:flex;"><span>    countSort(arr, exp);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+      </div></div>
+
+  
+    
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="https://fhawk12.github.io/posts/mysql/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Mysql</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="https://fhawk12.github.io/posts/b-tree/">
+                <span class="button__text">B Tree</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2024 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

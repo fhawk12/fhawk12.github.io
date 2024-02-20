@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mysql on fhawk&#39;s blog</title>
+    <link>https://fhawk12.github.io/tags/mysql/</link>
+    <description>Recent content in mysql on fhawk&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 03 Jan 2024 09:58:49 +0800</lastBuildDate><atom:link href="https://fhawk12.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mysql</title>
+      <link>https://fhawk12.github.io/posts/mysql/</link>
+      <pubDate>Wed, 03 Jan 2024 09:58:49 +0800</pubDate>
+      
+      <guid>https://fhawk12.github.io/posts/mysql/</guid>
+      <description>Common commands Add user: create user &#39;username&#39;@&#39;localhost&#39; identified by &#39;password&#39;; Query users: select User from mysql.user; Grant user: grant all privileges on databasename.tablename to &#39;username&#39;@&#39;localhost&#39;; Query privileges: show grants for &#39;username&#39;; Change password: set password for username@localhost = password(‘password’); Delete user: drop user username; </description>
+      <content>&lt;h1 id=&#34;common-commands&#34;&gt;Common commands&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Add user: &lt;code&gt; create user &#39;username&#39;@&#39;localhost&#39; identified by &#39;password&#39;;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Query users: &lt;code&gt;select User from mysql.user;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Grant user: &lt;code&gt;grant all privileges on databasename.tablename to &#39;username&#39;@&#39;localhost&#39;;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Query privileges: &lt;code&gt;show grants for &#39;username&#39;;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Change password: &lt;code&gt;set password for username@localhost = password(‘password’);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Delete user: &lt;code&gt;drop user username;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

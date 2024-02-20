@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>B Tree :: fhawk&#39;s blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content=" " />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://fhawk12.github.io/posts/b-tree/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://fhawk12.github.io/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://fhawk12.github.io/img/theme-colors/rose-pine.png">
+  <link rel="apple-touch-icon" href="https://fhawk12.github.io/img/theme-colors/rose-pine.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="B Tree">
+<meta property="og:description" content=" " />
+<meta property="og:url" content="https://fhawk12.github.io/posts/b-tree/" />
+<meta property="og:site_name" content="fhawk&#39;s blog" />
+
+  
+    <meta property="og:image" content="https://fhawk12.github.io/img/favicon/rose-pine.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2023-11-04 18:10:19 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="rose-pine">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Home
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/tags">Tags</a></li>
+        
+      
+        
+          <li><a href="/posts/algorithm-template">Template</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/tags" >Tags</a></li>
+        
+      
+        
+          <li><a href="/posts/algorithm-template" >Template</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://fhawk12.github.io/posts/b-tree/">B Tree</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2023-11-04</time></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="https://fhawk12.github.io/tags/data-structure/">data structure</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h1 id="b-tree">B Tree<a href="#b-tree" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span> KeyType<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BTreeNode</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">bool</span> isLeaf;
+</span></span><span style="display:flex;"><span>  std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>KeyType<span style="color:#f92672">&gt;</span> keys;
+</span></span><span style="display:flex;"><span>  std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>BTreeNode <span style="color:#f92672">*&gt;</span> children;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  BTreeNode(<span style="color:#66d9ef">bool</span> leaf <span style="color:#f92672">=</span> true) { isLeaf <span style="color:#f92672">=</span> leaf; }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span> KeyType<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BTree</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>  BTreeNode<span style="color:#f92672">&lt;</span>KeyType<span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>root;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> t; <span style="color:#75715e">// Minimum degree
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>  BTree(<span style="color:#66d9ef">int</span> _t) <span style="color:#f92672">:</span> root(<span style="color:#66d9ef">nullptr</span>), t(_t) {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insert</span>(<span style="color:#66d9ef">const</span> KeyType <span style="color:#f92672">&amp;</span>key) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (root <span style="color:#f92672">==</span> <span style="color:#66d9ef">nullptr</span>) {
+</span></span><span style="display:flex;"><span>      root <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BTreeNode<span style="color:#f92672">&lt;</span>KeyType<span style="color:#f92672">&gt;</span>(true);
+</span></span><span style="display:flex;"><span>      root<span style="color:#f92672">-&gt;</span>keys.push_back(key);
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (root<span style="color:#f92672">-&gt;</span>keys.size() <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> t <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>        BTreeNode<span style="color:#f92672">&lt;</span>KeyType<span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>new_root <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BTreeNode<span style="color:#f92672">&lt;</span>KeyType<span style="color:#f92672">&gt;</span>(false);
+</span></span><span style="display:flex;"><span>        new_root<span style="color:#f92672">-&gt;</span>children.push_back(root);
+</span></span><span style="display:flex;"><span>        splitChild(new_root, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        root <span style="color:#f92672">=</span> new_root;
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      insertNonFull(root, key);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">search</span>(<span style="color:#66d9ef">const</span> KeyType <span style="color:#f92672">&amp;</span>key) { searchKey(root, key); }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">print</span>() { printTree(root, <span style="color:#ae81ff">0</span>); }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">void</span> insertNonFull(BTreeNode<span style="color:#f92672">&lt;</span>KeyType<span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>node, <span style="color:#66d9ef">const</span> KeyType <span style="color:#f92672">&amp;</span>key) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> node<span style="color:#f92672">-&gt;</span>keys.size() <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (node<span style="color:#f92672">-&gt;</span>isLeaf) {
+</span></span><span style="display:flex;"><span>      node<span style="color:#f92672">-&gt;</span>keys.push_back(KeyType()); <span style="color:#75715e">// Make space for a new key
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">while</span> (i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> key <span style="color:#f92672">&lt;</span> node<span style="color:#f92672">-&gt;</span>keys[i]) {
+</span></span><span style="display:flex;"><span>        node<span style="color:#f92672">-&gt;</span>keys[i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> node<span style="color:#f92672">-&gt;</span>keys[i];
+</span></span><span style="display:flex;"><span>        i<span style="color:#f92672">--</span>;
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      node<span style="color:#f92672">-&gt;</span>keys[i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> key;
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">while</span> (i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> key <span style="color:#f92672">&lt;</span> node<span style="color:#f92672">-&gt;</span>keys[i])
+</span></span><span style="display:flex;"><span>        i<span style="color:#f92672">--</span>;
+</span></span><span style="display:flex;"><span>      i<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (node<span style="color:#f92672">-&gt;</span>children[i]<span style="color:#f92672">-&gt;</span>keys.size() <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> t <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>        splitChild(node, i);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (key <span style="color:#f92672">&gt;</span> node<span style="color:#f92672">-&gt;</span>keys[i])
+</span></span><span style="display:flex;"><span>          i<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      insertNonFull(node<span style="color:#f92672">-&gt;</span>children[i], key);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">splitChild</span>(BTreeNode<span style="color:#f92672">&lt;</span>KeyType<span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>parent, <span style="color:#66d9ef">int</span> index) {
+</span></span><span style="display:flex;"><span>    BTreeNode<span style="color:#f92672">&lt;</span>KeyType<span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>child <span style="color:#f92672">=</span> parent<span style="color:#f92672">-&gt;</span>children[index];
+</span></span><span style="display:flex;"><span>    BTreeNode<span style="color:#f92672">&lt;</span>KeyType<span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>new_child <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BTreeNode<span style="color:#f92672">&lt;</span>KeyType<span style="color:#f92672">&gt;</span>(child<span style="color:#f92672">-&gt;</span>isLeaf);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    parent<span style="color:#f92672">-&gt;</span>keys.insert(parent<span style="color:#f92672">-&gt;</span>keys.begin() <span style="color:#f92672">+</span> index, child<span style="color:#f92672">-&gt;</span>keys[t <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    parent<span style="color:#f92672">-&gt;</span>children.insert(parent<span style="color:#f92672">-&gt;</span>children.begin() <span style="color:#f92672">+</span> index <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, new_child);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    new_child<span style="color:#f92672">-&gt;</span>keys.assign(child<span style="color:#f92672">-&gt;</span>keys.begin() <span style="color:#f92672">+</span> t, child<span style="color:#f92672">-&gt;</span>keys.end());
+</span></span><span style="display:flex;"><span>    child<span style="color:#f92672">-&gt;</span>keys.erase(child<span style="color:#f92672">-&gt;</span>keys.begin() <span style="color:#f92672">+</span> t, child<span style="color:#f92672">-&gt;</span>keys.end());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>child<span style="color:#f92672">-&gt;</span>isLeaf) {
+</span></span><span style="display:flex;"><span>      new_child<span style="color:#f92672">-&gt;</span>children.assign(child<span style="color:#f92672">-&gt;</span>children.begin() <span style="color:#f92672">+</span> t,
+</span></span><span style="display:flex;"><span>                                 child<span style="color:#f92672">-&gt;</span>children.end());
+</span></span><span style="display:flex;"><span>      child<span style="color:#f92672">-&gt;</span>children.erase(child<span style="color:#f92672">-&gt;</span>children.begin() <span style="color:#f92672">+</span> t, child<span style="color:#f92672">-&gt;</span>children.end());
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">searchKey</span>(BTreeNode<span style="color:#f92672">&lt;</span>KeyType<span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>node, <span style="color:#66d9ef">const</span> KeyType <span style="color:#f92672">&amp;</span>key) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (i <span style="color:#f92672">&lt;</span> node<span style="color:#f92672">-&gt;</span>keys.size() <span style="color:#f92672">&amp;&amp;</span> key <span style="color:#f92672">&gt;</span> node<span style="color:#f92672">-&gt;</span>keys[i])
+</span></span><span style="display:flex;"><span>      i<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">&lt;</span> node<span style="color:#f92672">-&gt;</span>keys.size() <span style="color:#f92672">&amp;&amp;</span> key <span style="color:#f92672">==</span> node<span style="color:#f92672">-&gt;</span>keys[i]) {
+</span></span><span style="display:flex;"><span>      std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Key &#34;</span> <span style="color:#f92672">&lt;&lt;</span> key <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; found in the tree.&#34;</span> <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (node<span style="color:#f92672">-&gt;</span>isLeaf) {
+</span></span><span style="display:flex;"><span>      std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Key &#34;</span> <span style="color:#f92672">&lt;&lt;</span> key <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; not found in the tree.&#34;</span> <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    searchKey(node<span style="color:#f92672">-&gt;</span>children[i], key);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printTree</span>(BTreeNode<span style="color:#f92672">&lt;</span>KeyType<span style="color:#f92672">&gt;</span> <span style="color:#f92672">*</span>node, <span style="color:#66d9ef">int</span> depth) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (node) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">int</span> i;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">for</span> (i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> node<span style="color:#f92672">-&gt;</span>keys.size(); i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>node<span style="color:#f92672">-&gt;</span>isLeaf)
+</span></span><span style="display:flex;"><span>          printTree(node<span style="color:#f92672">-&gt;</span>children[i], depth <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> depth; j<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>          std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;  &#34;</span>;
+</span></span><span style="display:flex;"><span>        std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> node<span style="color:#f92672">-&gt;</span>keys[i] <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>node<span style="color:#f92672">-&gt;</span>isLeaf)
+</span></span><span style="display:flex;"><span>        printTree(node<span style="color:#f92672">-&gt;</span>children[i], depth <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div>
+      </div></div>
+
+  
+    
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="https://fhawk12.github.io/posts/sort-algorithm/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Sort Algorithm</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="https://fhawk12.github.io/posts/pascals-triangle/">
+                <span class="button__text">Pascal&#39;s Triangle</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2024 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>archlinux on fhawk&#39;s blog</title>
+    <link>https://fhawk12.github.io/tags/archlinux/</link>
+    <description>Recent content in archlinux on fhawk&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 18 Sep 2023 09:58:49 +0800</lastBuildDate><atom:link href="https://fhawk12.github.io/tags/archlinux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Archlinux Automatic Login</title>
+      <link>https://fhawk12.github.io/posts/archlinux-automatic-login/</link>
+      <pubDate>Mon, 18 Sep 2023 09:58:49 +0800</pubDate>
+      
+      <guid>https://fhawk12.github.io/posts/archlinux-automatic-login/</guid>
+      <description>In most cases, you want to set up automatic login on a virtual console, (whose device name is ttyN, where N is a number). The configuration of automatic login for serial consoles will be slightly different. Device names of the serial consoles look like ttySN, where N is a number.
+Execute systemctl edit getty@tty1 or vim /etc/systemd/system/getty.target.wants/getty@tty1.service with the following content:
+/etc/systemd/system/getty@tty1.service.d/autologin.conf [Service] ExecStart=-/sbin/agetty -o &amp;#39;-p -f -- \\u&amp;#39; --noclear --autologin username %I $TERM Tips: Don&amp;rsquo;t reboot immediately, use clt+alt+F2 switch to tty2 and see whether it is successful or not</description>
+      <content>&lt;p&gt;In most cases, you want to set up automatic login on a virtual console, (whose device name is ttyN, where N is a number). The configuration of automatic login for serial consoles will be slightly different. Device names of the serial consoles look like ttySN, where N is a number.&lt;/p&gt;
+&lt;p&gt;Execute &lt;code&gt;systemctl edit getty@tty1&lt;/code&gt; or &lt;code&gt;vim /etc/systemd/system/getty.target.wants/getty@tty1.service&lt;/code&gt; with the following content:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/etc/systemd/system/getty@tty1.service.d/autologin.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;Service&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ExecStart&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;-/sbin/agetty -o &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;-p -f -- \\u&amp;#39;&lt;/span&gt; --noclear --autologin username %I $TERM
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Tips: Don&amp;rsquo;t reboot immediately, use &lt;code&gt;clt+alt+F2&lt;/code&gt; switch to tty2 and see whether it is successful or not&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;resources&#34;&gt;Resources&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.archlinux.org/title/Getty&#34;&gt;https://wiki.archlinux.org/title/Getty&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
