@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>algorithm on fhawk&#39;s blog</title>
+    <title>Algorithm on fhawk&#39;s blog</title>
     <link>https://fhawk12.github.io/tags/algorithm/</link>
-    <description>Recent content in algorithm on fhawk&#39;s blog</description>
+    <description>Recent content in Algorithm on fhawk&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 04 Nov 2023 19:39:46 +0800</lastBuildDate><atom:link href="https://fhawk12.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
@@ -385,7 +385,7 @@
 &lt;h4 id=&#34;bfs-breadth-first-traversal&#34;&gt;BFS (Breadth-First Traversal)&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://leetcode.cn/problems/shortest-path-visiting-all-nodes/&#34;&gt;LC 847. Shortest Path Visiting All Nodes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://leetcode.cn/problems/validate-binary-tree-nodes/?envType=daily-question&amp;amp;envId=2023-10-16&#34;&gt;LC 1361. Validate Binary Tree Nodes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://leetcode.cn/problems/validate-binary-tree-nodes/?envType=daily-question&amp;envId=2023-10-16&#34;&gt;LC 1361. Validate Binary Tree Nodes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://leetcode.cn/problems/bus-routes/&#34;&gt;LC 815. Bus Routes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;bfs&lt;/span&gt;(vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;graph) {
@@ -409,6 +409,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;dijkstra&#34;&gt;Dijkstra&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://leetcode.cn/problems/design-graph-with-shortest-path-calculator/&#34;&gt;LC 2642. Design Graph With Shortest Path Calculator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination/&#34;&gt;LC 1976. Number of Ways to Arrive at Destination&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;dijkstra&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; n, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; start, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; end, vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;edges) {
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// build graph
@@ -514,7 +515,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;union-find&#34;&gt;Union Find&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://leetcode.cn/problems/validate-binary-tree-nodes/?envType=daily-question&amp;amp;envId=2023-10-16&#34;&gt;LC 1361. Validate Binary Tree Nodes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://leetcode.cn/problems/validate-binary-tree-nodes/?envType=daily-question&amp;envId=2023-10-16&#34;&gt;LC 1361. Validate Binary Tree Nodes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;UnionFind&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
