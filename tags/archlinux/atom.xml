@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>fhawk12&#x27;s blog - archlinux</title>
+    <link rel="self" type="application/atom+xml" href="https://fhawk12.github.io/tags/archlinux/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://fhawk12.github.io/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-09-18T00:00:00+00:00</updated>
+    <id>https://fhawk12.github.io/tags/archlinux/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Archlinux Automatic Login</title>
+        <published>2023-09-18T00:00:00+00:00</published>
+        <updated>2023-09-18T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              fhawk12
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://fhawk12.github.io/posts/archlinux-automatic-login/"/>
+        <id>https://fhawk12.github.io/posts/archlinux-automatic-login/</id>
+        
+        <content type="html" xml:base="https://fhawk12.github.io/posts/archlinux-automatic-login/">&lt;p&gt;In most cases, you want to set up automatic login on a virtual console, (whose device name is ttyN, where N is a number). The configuration of automatic login for serial consoles will be slightly different. Device names of the serial consoles look like ttySN, where N is a number.&lt;&#x2F;p&gt;
+&lt;p&gt;Execute &lt;code&gt;systemctl edit getty@tty1&lt;&#x2F;code&gt; or &lt;code&gt;vim &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;getty.target.wants&#x2F;getty@tty1.service&lt;&#x2F;code&gt; with the following content:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;&#x2F;etc&#x2F;systemd&#x2F;system&#x2F;getty@tty1.service.d&#x2F;autologin.conf
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;[Service]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;ExecStart&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;-&#x2F;sbin&#x2F;agetty &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;-o &lt;&#x2F;span&gt;&lt;span style=&quot;color:#839496;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;-p -f -- \\u&lt;&#x2F;span&gt;&lt;span style=&quot;color:#839496;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt; --noclear --autologin&lt;&#x2F;span&gt;&lt;span&gt; username &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;%&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;I &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;TERM
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tips: Don&#x27;t reboot immediately, use &lt;code&gt;clt+alt+F2&lt;&#x2F;code&gt; switch to tty2 and see whether it is successful or not&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h1 id=&quot;resources&quot;&gt;Resources&lt;&#x2F;h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;wiki.archlinux.org&#x2F;title&#x2F;Getty&quot;&gt;https:&#x2F;&#x2F;wiki.archlinux.org&#x2F;title&#x2F;Getty&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+        
+    </entry>
+</feed>

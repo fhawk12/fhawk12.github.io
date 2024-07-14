@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>fhawk12&#x27;s blog - math</title>
+    <link rel="self" type="application/atom+xml" href="https://fhawk12.github.io/tags/math/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://fhawk12.github.io/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-09-22T00:00:00+00:00</updated>
+    <id>https://fhawk12.github.io/tags/math/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Pascal&#x27;s Triangle</title>
+        <published>2023-09-22T00:00:00+00:00</published>
+        <updated>2023-09-22T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              fhawk12
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://fhawk12.github.io/posts/pascal-s-triangle/"/>
+        <id>https://fhawk12.github.io/posts/pascal-s-triangle/</id>
+        
+        <content type="html" xml:base="https://fhawk12.github.io/posts/pascal-s-triangle/">&lt;p&gt;In mathematics, Pascal&#x27;s triangle is a triangular array of the binomial coefficients arising in probability theory, combinatorics, and algebra.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#cb4b16;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#839496;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;iostream&lt;&#x2F;span&gt;&lt;span style=&quot;color:#839496;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cb4b16;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#839496;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;vector&lt;&#x2F;span&gt;&lt;span style=&quot;color:#839496;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;using namespace&lt;&#x2F;span&gt;&lt;span&gt; std;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;PascalTriangle &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;private&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; numRows;
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; triangle;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;public&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;PascalTriangle&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int numRows&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d33682;&quot;&gt;this&lt;&#x2F;span&gt;&lt;span&gt;-&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;numRows &lt;&#x2F;span&gt;&lt;span&gt;= numRows;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d33682;&quot;&gt;this&lt;&#x2F;span&gt;&lt;span&gt;-&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;triangle &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;vector&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;(numRows);
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;lt; numRows; i++) {
+&lt;&#x2F;span&gt;&lt;span&gt;      triangle&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;resize&lt;&#x2F;span&gt;&lt;span&gt;(i + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;      triangle&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      triangle&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; j = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;; j &amp;lt; i; j++) {
+&lt;&#x2F;span&gt;&lt;span&gt;        triangle&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= triangle&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;j - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;+ triangle&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;lt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d33682;&quot;&gt;this&lt;&#x2F;span&gt;&lt;span&gt;-&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;numRows&lt;&#x2F;span&gt;&lt;span&gt;; i++) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; j = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; j &amp;lt;= i; j++) {
+&lt;&#x2F;span&gt;&lt;span&gt;        cout &amp;lt;&amp;lt; triangle&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#839496;&quot;&gt;&amp;quot; &amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;      cout &amp;lt;&amp;lt; endl;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;get&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int row&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int col&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(row &amp;lt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0 &lt;&#x2F;span&gt;&lt;span&gt;|| col &amp;lt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0 &lt;&#x2F;span&gt;&lt;span&gt;|| col &amp;gt; row) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; triangle&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;row&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;col&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;};
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        
+    </entry>
+</feed>

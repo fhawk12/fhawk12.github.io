@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>fhawk12&#x27;s blog</title>
+</head>
+<body>
+  <header class="nav-bar">
+    
+<nav>
+  <ul>
+    
+    <li><a href="&#x2F;posts">posts</a></li>
+    
+    <li><a href="&#x2F;tags">tags</a></li>
+    
+    <li><a href="&#x2F;archive">archive</a></li>
+    
+  </ul>
+</nav>
+
+
+  </header>
+  <main class="content">
+    
+
+<h1 class="title">
+  Algorithm Template
+</h1>
+<p class="subtitle"><strong>2021-09-23</strong></p>
+
+
+<h2>Table of contents</h2>
+<ul>
+
+  <li>
+  <a href="https://fhawk12.github.io/posts/algorithm-template/#array">Array</a>
+  
+    <ul>
+      
+        <li>
+        <a href="https://fhawk12.github.io/posts/algorithm-template/#divide-loop">Divide Loop</a>
+          <ul>
+          
+          </ul>
+        </li>
+      
+    </ul>
+  
+  </li>
+
+  <li>
+  <a href="https://fhawk12.github.io/posts/algorithm-template/#binary-search">Binary Search</a>
+  
+    <ul>
+      
+        <li>
+        <a href="https://fhawk12.github.io/posts/algorithm-template/#lower-bound">Lower Bound</a>
+          <ul>
+          
+          </ul>
+        </li>
+      
+        <li>
+        <a href="https://fhawk12.github.io/posts/algorithm-template/#upper-bound">Upper Bound</a>
+          <ul>
+          
+          </ul>
+        </li>
+      
+    </ul>
+  
+  </li>
+
+  <li>
+  <a href="https://fhawk12.github.io/posts/algorithm-template/#bits">Bits</a>
+  
+    <ul>
+      
+        <li>
+        <a href="https://fhawk12.github.io/posts/algorithm-template/#gosper-s-hack">Gosper&#x27;s Hack</a>
+          <ul>
+          
+          </ul>
+        </li>
+      
+    </ul>
+  
+  </li>
+
+  <li>
+  <a href="https://fhawk12.github.io/posts/algorithm-template/#diff-array">Diff Array</a>
+  
+  </li>
+
+  <li>
+  <a href="https://fhawk12.github.io/posts/algorithm-template/#dp-dynamic-programming">DP (Dynamic Programming)</a>
+  
+    <ul>
+      
+        <li>
+        <a href="https://fhawk12.github.io/posts/algorithm-template/#knapsack">knapsack</a>
+          <ul>
+          
+            <li>
+            <a href="https://fhawk12.github.io/posts/algorithm-template/#0-1-knapsack">0-1 knapsack</a>
+            </li>
+          
+          </ul>
+        </li>
+      
+        <li>
+        <a href="https://fhawk12.github.io/posts/algorithm-template/#digit-dp">Digit DP</a>
+          <ul>
+          
+            <li>
+            <a href="https://fhawk12.github.io/posts/algorithm-template/#0-n">[0, n]</a>
+            </li>
+          
+            <li>
+            <a href="https://fhawk12.github.io/posts/algorithm-template/#low-high">[low, high]</a>
+            </li>
+          
+          </ul>
+        </li>
+      
+    </ul>
+  
+  </li>
+
+  <li>
+  <a href="https://fhawk12.github.io/posts/algorithm-template/#graph">Graph</a>
+  
+    <ul>
+      
+        <li>
+        <a href="https://fhawk12.github.io/posts/algorithm-template/#shortest-path">Shortest Path</a>
+          <ul>
+          
+            <li>
+            <a href="https://fhawk12.github.io/posts/algorithm-template/#bfs-breadth-first-traversal">BFS (Breadth-First Traversal)</a>
+            </li>
+          
+            <li>
+            <a href="https://fhawk12.github.io/posts/algorithm-template/#dijkstra">Dijkstra</a>
+            </li>
+          
+            <li>
+            <a href="https://fhawk12.github.io/posts/algorithm-template/#floyd-warshall">Floyd–Warshall</a>
+            </li>
+          
+          </ul>
+        </li>
+      
+        <li>
+        <a href="https://fhawk12.github.io/posts/algorithm-template/#topological-sort">Topological Sort</a>
+          <ul>
+          
+          </ul>
+        </li>
+      
+        <li>
+        <a href="https://fhawk12.github.io/posts/algorithm-template/#union-find">Union Find</a>
+          <ul>
+          
+          </ul>
+        </li>
+      
+    </ul>
+  
+  </li>
+
+  <li>
+  <a href="https://fhawk12.github.io/posts/algorithm-template/#prefix-sum">Prefix Sum</a>
+  
+    <ul>
+      
+        <li>
+        <a href="https://fhawk12.github.io/posts/algorithm-template/#two-dimension-prefix-sum">Two-dimension Prefix Sum</a>
+          <ul>
+          
+          </ul>
+        </li>
+      
+    </ul>
+  
+  </li>
+
+  <li>
+  <a href="https://fhawk12.github.io/posts/algorithm-template/#sliding-window">Sliding Window</a>
+  
+  </li>
+
+  <li>
+  <a href="https://fhawk12.github.io/posts/algorithm-template/#stack">Stack</a>
+  
+    <ul>
+      
+        <li>
+        <a href="https://fhawk12.github.io/posts/algorithm-template/#monotonic-stack">Monotonic Stack</a>
+          <ul>
+          
+          </ul>
+        </li>
+      
+    </ul>
+  
+  </li>
+
+  <li>
+  <a href="https://fhawk12.github.io/posts/algorithm-template/#string">String</a>
+  
+    <ul>
+      
+        <li>
+        <a href="https://fhawk12.github.io/posts/algorithm-template/#lcs-the-longest-common-subsequence">LCS (The Longest Common Subsequence)</a>
+          <ul>
+          
+          </ul>
+        </li>
+      
+    </ul>
+  
+  </li>
+
+  <li>
+  <a href="https://fhawk12.github.io/posts/algorithm-template/#tree">Tree</a>
+  
+    <ul>
+      
+        <li>
+        <a href="https://fhawk12.github.io/posts/algorithm-template/#lca-lowest-common-ancestor">LCA (Lowest Common Ancestor)</a>
+          <ul>
+          
+          </ul>
+        </li>
+      
+        <li>
+        <a href="https://fhawk12.github.io/posts/algorithm-template/#prefix-tree-trie">Prefix Tree (Trie)</a>
+          <ul>
+          
+          </ul>
+        </li>
+      
+    </ul>
+  
+  </li>
+
+</ul>
+
+
+<h2 id="array">Array</h2>
+<h3 id="divide-loop">Divide Loop</h3>
+<ul>
+<li><a href="https://leetcode.cn/problems/find-if-array-can-be-sorted">LC 3011. Find if Array Can Be Sorted</a></li>
+<li><a href="https://leetcode.cn/problems/longest-substring-of-all-vowels-in-order/">LC 1839. Longest Substring Of All Vowels in Order</a></li>
+</ul>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">0</span><span>; i &lt; nums.</span><span style="color:#b58900;">size</span><span>();) {
+</span><span>  </span><span style="color:#268bd2;">int</span><span> start = i;
+</span><span>  </span><span style="color:#859900;">while </span><span>(i &lt; nums.</span><span style="color:#b58900;">size</span><span>() &amp;&amp; </span><span style="color:#859900;">...</span><span>) {
+</span><span>    i++;
+</span><span>  }
+</span><span>  </span><span style="color:#93a1a1;">// from start to i-1 is a group
+</span><span>  </span><span style="color:#93a1a1;">// the next group start with i, without the need for i++
+</span><span>}
+</span></code></pre>
+<h2 id="binary-search">Binary Search</h2>
+<ul>
+<li><a href="https://leetcode.cn/problems/house-robber-iv/">LC 2560. House Robber IV</a></li>
+<li><a href="https://leetcode.cn/problems/number-of-flowers-in-full-bloom/">LC 2251. Number of Flowers in Full Bloom</a></li>
+<li><a href="https://leetcode.cn/problems/find-in-mountain-array/">LC 1095. Find in Mountain Array</a></li>
+<li><a href="https://leetcode.cn/problems/maximum-number-of-alloys/">LC 2861. Maximum Number of Alloys</a></li>
+</ul>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#859900;">while </span><span>(left &lt; right) {
+</span><span>  </span><span style="color:#268bd2;">int</span><span> mid = left + (right - left) / </span><span style="color:#6c71c4;">2</span><span>;
+</span><span>  </span><span style="color:#859900;">if </span><span>(condition) {
+</span><span>    left = mid + </span><span style="color:#6c71c4;">1</span><span>;
+</span><span>  } </span><span style="color:#859900;">else </span><span>{
+</span><span>    right = mid;
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<h3 id="lower-bound">Lower Bound</h3>
+<ul>
+<li><a href="https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/">LC 34. Find First and Last Position of Element in Sorted Array</a></li>
+</ul>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#93a1a1;">//     ↓
+</span><span style="color:#93a1a1;">// LLLLEEEEGGGGGG
+</span><span style="color:#93a1a1;">// return the first no less than target element
+</span><span style="color:#268bd2;">int </span><span style="color:#b58900;">lowerBound</span><span>(vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">nums</span><span>, </span><span style="color:#268bd2;">int target</span><span>) {
+</span><span>  </span><span style="color:#268bd2;">int</span><span> l = </span><span style="color:#6c71c4;">0</span><span>;
+</span><span>  </span><span style="color:#268bd2;">int</span><span> r = nums.</span><span style="color:#b58900;">size</span><span>();
+</span><span>
+</span><span>  </span><span style="color:#859900;">while </span><span>(l &lt; r) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> mid = l + (r - l) / </span><span style="color:#6c71c4;">2</span><span>;
+</span><span>    </span><span style="color:#859900;">if </span><span>(nums</span><span style="color:#268bd2;">[</span><span>mid</span><span style="color:#268bd2;">] </span><span>&lt; target) {
+</span><span>      l = mid + </span><span style="color:#6c71c4;">1</span><span>;
+</span><span>    } </span><span style="color:#859900;">else </span><span>{
+</span><span>      r = mid;
+</span><span>    }
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#859900;">return</span><span> l;
+</span><span>}
+</span></code></pre>
+<h3 id="upper-bound">Upper Bound</h3>
+<ul>
+<li><a href="https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/">LC 34. Find First and Last Position of Element in Sorted Array</a></li>
+<li><a href="https://leetcode.cn/problems/number-of-flowers-in-full-bloom/">LC 2251. Number of Flowers in Full Bloom</a></li>
+</ul>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#93a1a1;">//         ↓
+</span><span style="color:#93a1a1;">// LLLLEEEEGGGGGG
+</span><span style="color:#93a1a1;">// return the first greater than target element
+</span><span style="color:#268bd2;">int </span><span style="color:#b58900;">upperBound</span><span>(vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">nums</span><span>, </span><span style="color:#268bd2;">int target</span><span>) {
+</span><span>  </span><span style="color:#268bd2;">int</span><span> l = </span><span style="color:#6c71c4;">0</span><span>;
+</span><span>  </span><span style="color:#268bd2;">int</span><span> r = nums.</span><span style="color:#b58900;">size</span><span>();
+</span><span>
+</span><span>  </span><span style="color:#859900;">while </span><span>(l &lt; r) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> mid = l + (r - l) / </span><span style="color:#6c71c4;">2</span><span>;
+</span><span>    </span><span style="color:#859900;">if </span><span>(nums</span><span style="color:#268bd2;">[</span><span>mid</span><span style="color:#268bd2;">] </span><span>&gt; target) {
+</span><span>      r = mid;
+</span><span>    } </span><span style="color:#859900;">else </span><span>{
+</span><span>      l = mid + </span><span style="color:#6c71c4;">1</span><span>;
+</span><span>    }
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#859900;">return</span><span> l;
+</span><span>}
+</span></code></pre>
+<h2 id="bits">Bits</h2>
+<h3 id="gosper-s-hack">Gosper's Hack</h3>
+<p>all n-bit values that have k bits set to 1</p>
+<ul>
+<li><a href="https://leetcode.cn/problems/maximum-rows-covered-by-columns/">LC 2397. Maximum Rows Covered by Columns</a></li>
+</ul>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#268bd2;">void </span><span style="color:#b58900;">GospersHack</span><span>(</span><span style="color:#268bd2;">int n</span><span>, </span><span style="color:#268bd2;">int k</span><span>) {
+</span><span>  </span><span style="color:#268bd2;">int</span><span> x = (</span><span style="color:#6c71c4;">1 </span><span>&lt;&lt; k) - </span><span style="color:#6c71c4;">1</span><span>;
+</span><span>  </span><span style="color:#268bd2;">int</span><span> limit = (</span><span style="color:#6c71c4;">1 </span><span>&lt;&lt; n);
+</span><span>  </span><span style="color:#859900;">while </span><span>(x &lt; limit) {
+</span><span>    </span><span style="color:#859900;">if </span><span>(</span><span style="color:#93a1a1;">/* check if have k bits set to 1 */</span><span>) {
+</span><span>        </span><span style="color:#93a1a1;">/* do something */
+</span><span>    }
+</span><span>    </span><span style="color:#268bd2;">int</span><span> lowbit = x </span><span style="color:#859900;">&amp; </span><span>-x;
+</span><span>    </span><span style="color:#268bd2;">int</span><span> left = x + lowbit;
+</span><span>    </span><span style="color:#268bd2;">int</span><span> right = ((left ^ x) &gt;&gt; </span><span style="color:#6c71c4;">2</span><span>) / lowbit;
+</span><span>    x = left | right;
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<h2 id="diff-array">Diff Array</h2>
+<ul>
+<li><a href="https://leetcode.cn/problems/number-of-flowers-in-full-bloom/">LC 2251. Number of Flowers in Full Bloom</a></li>
+</ul>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span>vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#b58900;">diffArray</span><span>(vector&lt;vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt;&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">nums</span><span>, vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">query</span><span>) {
+</span><span>  map&lt;</span><span style="color:#268bd2;">int</span><span>, </span><span style="color:#268bd2;">int</span><span>&gt; diff;
+</span><span>  diff</span><span style="color:#268bd2;">[</span><span style="color:#6c71c4;">0</span><span style="color:#268bd2;">] </span><span>= </span><span style="color:#6c71c4;">0</span><span>;
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">auto </span><span style="color:#859900;">&amp;</span><span>e </span><span style="color:#859900;">:</span><span> nums) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> start = e</span><span style="color:#268bd2;">[</span><span style="color:#6c71c4;">0</span><span style="color:#268bd2;">]</span><span>, end = e</span><span style="color:#268bd2;">[</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">] </span><span>+ </span><span style="color:#6c71c4;">1</span><span>;
+</span><span>    diff</span><span style="color:#268bd2;">[</span><span>start</span><span style="color:#268bd2;">]</span><span>++;
+</span><span>    diff</span><span style="color:#268bd2;">[</span><span>end</span><span style="color:#268bd2;">]</span><span>--;
+</span><span>  }
+</span><span>
+</span><span>  vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; pos;
+</span><span>  vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; prefix;
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">int</span><span> curr = </span><span style="color:#6c71c4;">0</span><span>;
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">auto</span><span> pair </span><span style="color:#859900;">:</span><span> diff) {
+</span><span>    pos.</span><span style="color:#b58900;">push_back</span><span>(pair.</span><span style="color:#268bd2;">first</span><span>);
+</span><span>    curr += pair.</span><span style="color:#268bd2;">second</span><span>;
+</span><span>    prefix.</span><span style="color:#b58900;">push_back</span><span>(curr);
+</span><span>  }
+</span><span>
+</span><span>  vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; ans;
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> q </span><span style="color:#859900;">:</span><span> query) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#b58900;">upper_bound</span><span>(pos.</span><span style="color:#b58900;">begin</span><span>(), pos.</span><span style="color:#b58900;">end</span><span>(), q) - pos.</span><span style="color:#b58900;">begin</span><span>() - </span><span style="color:#6c71c4;">1</span><span>;
+</span><span>    ans.</span><span style="color:#b58900;">push_back</span><span>(prefix</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">]</span><span>);
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#859900;">return</span><span> ans;
+</span><span>}
+</span></code></pre>
+<h2 id="dp-dynamic-programming">DP (Dynamic Programming)</h2>
+<h3 id="knapsack">knapsack</h3>
+<h4 id="0-1-knapsack">0-1 knapsack</h4>
+<ul>
+<li><a href="https://leetcode.cn/problems/partition-equal-subset-sum/description/">LC 416. Partition Equal Subset Sum</a></li>
+<li><a href="https://leetcode.cn/problems/painting-the-walls/description">LC 2742. Painting the Walls</a></li>
+<li><a href="https://leetcode.cn/problems/target-sum/description">LC 494. Target Sum</a></li>
+</ul>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#268bd2;">int </span><span style="color:#b58900;">knapsack</span><span>(vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">weight</span><span>, vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">value</span><span>, </span><span style="color:#268bd2;">int capacity</span><span>) {
+</span><span>  </span><span style="color:#268bd2;">int</span><span> n = weight.</span><span style="color:#b58900;">size</span><span>();
+</span><span>  vector&lt;vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt;&gt; </span><span style="color:#b58900;">dp</span><span>(n + </span><span style="color:#6c71c4;">1</span><span>, </span><span style="color:#b58900;">vector</span><span>&lt;</span><span style="color:#268bd2;">int</span><span>&gt;(capacity + </span><span style="color:#6c71c4;">1</span><span>, </span><span style="color:#6c71c4;">0</span><span>));
+</span><span>
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">1</span><span>; i &lt;= n; i++) {
+</span><span>    </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> w = </span><span style="color:#6c71c4;">1</span><span>; w &lt;= capacity; w++) {
+</span><span>      </span><span style="color:#859900;">if </span><span>(weight</span><span style="color:#268bd2;">[</span><span>i-</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">] </span><span>&lt;= w) {
+</span><span>        dp</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">][</span><span>w</span><span style="color:#268bd2;">] </span><span>= </span><span style="color:#b58900;">max</span><span>(dp</span><span style="color:#268bd2;">[</span><span>i-</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">][</span><span>w</span><span style="color:#268bd2;">]</span><span>, dp</span><span style="color:#268bd2;">[</span><span>i-</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">][</span><span>w - weight</span><span style="color:#268bd2;">[</span><span>i-</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">]] </span><span>+ value</span><span style="color:#268bd2;">[</span><span>i-</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">]</span><span>);
+</span><span>      } </span><span style="color:#859900;">else </span><span>{
+</span><span>        dp</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">][</span><span>w</span><span style="color:#268bd2;">] </span><span>= dp</span><span style="color:#268bd2;">[</span><span>i-</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">][</span><span>w</span><span style="color:#268bd2;">]</span><span>;
+</span><span>      }
+</span><span>    }
+</span><span>  }
+</span><span>  </span><span style="color:#859900;">return</span><span> dp</span><span style="color:#268bd2;">[</span><span>n</span><span style="color:#268bd2;">][</span><span>capacity</span><span style="color:#268bd2;">]</span><span>;
+</span><span>}
+</span></code></pre>
+<h3 id="digit-dp">Digit DP</h3>
+<ul>
+<li><a href="https://leetcode.cn/problems/number-of-digit-one/">LC 233. Number of Digit One</a></li>
+<li><a href="https://leetcode.cn/problems/non-negative-integers-without-consecutive-ones/">LC 600. Non-negative Integers without Consecutive Ones</a></li>
+<li><a href="https://leetcode.cn/problems/numbers-at-most-n-given-digit-set/">LC 902. Numbers At Most N Given Digit Set</a></li>
+<li><a href="https://leetcode.cn/problems/numbers-with-repeated-digits/">LC 1012. Numbers With Repeated Digits</a></li>
+<li><a href="https://leetcode.cn/problems/find-all-good-strings/">LC 1397. Find All Good Strings</a></li>
+<li><a href="https://leetcode.cn/problems/count-of-integers/description/">LC 2719. Count of Integers</a></li>
+</ul>
+<h4 id="0-n">[0, n]</h4>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#268bd2;">int </span><span style="color:#b58900;">dp</span><span>(</span><span style="color:#268bd2;">int i</span><span>, </span><span style="color:#268bd2;">int mask</span><span>, </span><span style="color:#268bd2;">bool is_limit</span><span>, </span><span style="color:#268bd2;">bool is_num</span><span>) {
+</span><span>  </span><span style="color:#859900;">if </span><span>(i == len) </span><span style="color:#859900;">return</span><span> is_num;
+</span><span>  </span><span style="color:#859900;">if </span><span>(!is_limit &amp;&amp; is_num &amp;&amp; memo</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">] </span><span>!= -</span><span style="color:#6c71c4;">1</span><span>) </span><span style="color:#859900;">return</span><span> memo</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">]</span><span>;
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">int</span><span> ret = </span><span style="color:#6c71c4;">0</span><span>;
+</span><span>  </span><span style="color:#859900;">if </span><span>(!is_num) {
+</span><span>    ret = </span><span style="color:#b58900;">f</span><span>(i + </span><span style="color:#6c71c4;">1</span><span>, mask, </span><span style="color:#b58900;">false</span><span>, </span><span style="color:#b58900;">false</span><span>);
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">int</span><span> up = is_limit </span><span style="color:#859900;">?</span><span> s</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">] </span><span>- </span><span style="color:#839496;">&#39;</span><span style="color:#2aa198;">0</span><span style="color:#839496;">&#39; </span><span style="color:#859900;">: </span><span style="color:#6c71c4;">9</span><span>;
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> d = </span><span style="color:#6c71c4;">1 </span><span>- is_num; d &lt;= up; d++) {
+</span><span>    </span><span style="color:#859900;">if </span><span>((mask &gt;&gt; d </span><span style="color:#859900;">&amp; </span><span style="color:#6c71c4;">1</span><span>) == </span><span style="color:#6c71c4;">0</span><span>) {
+</span><span>      ret += </span><span style="color:#b58900;">f</span><span>(i + </span><span style="color:#6c71c4;">1</span><span>, mask | (</span><span style="color:#6c71c4;">1 </span><span>&lt;&lt; d), is_limit &amp;&amp; d == up, </span><span style="color:#b58900;">true</span><span>);
+</span><span>    }
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#859900;">if </span><span>(!is_limit &amp;&amp; is_num) memo</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">] </span><span>= ret;
+</span><span>  </span><span style="color:#859900;">return</span><span> ret;
+</span><span>}
+</span></code></pre>
+<h4 id="low-high">[low, high]</h4>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#93a1a1;">// align lead zero (optional)
+</span><span style="color:#93a1a1;">// int n = num2.length();
+</span><span style="color:#93a1a1;">// num1 = string(n-num1.length(), &#39;0&#39;) + num1;
+</span><span>
+</span><span style="color:#268bd2;">int </span><span style="color:#b58900;">dp</span><span>(</span><span style="color:#268bd2;">int i</span><span>, </span><span style="color:#268bd2;">int sum</span><span>, </span><span style="color:#268bd2;">bool limit_low</span><span>, </span><span style="color:#268bd2;">bool limit_high</span><span>) {
+</span><span>  </span><span style="color:#859900;">if </span><span>(sum &gt; max_sum) </span><span style="color:#859900;">return </span><span style="color:#6c71c4;">0</span><span>;
+</span><span>  </span><span style="color:#859900;">if </span><span>(i == n) </span><span style="color:#859900;">return</span><span> sum &gt;= min_sum;
+</span><span>  </span><span style="color:#859900;">if </span><span>(!limit_low &amp;&amp; !limit_high &amp;&amp; memo</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">][</span><span>sum</span><span style="color:#268bd2;">] </span><span>!= -</span><span style="color:#6c71c4;">1</span><span>) </span><span style="color:#859900;">return</span><span> memo</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">][</span><span>sum</span><span style="color:#268bd2;">]</span><span>;
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">int</span><span> low = limit_low </span><span style="color:#859900;">?</span><span> num1</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">]</span><span>-</span><span style="color:#839496;">&#39;</span><span style="color:#2aa198;">0</span><span style="color:#839496;">&#39; </span><span style="color:#859900;">: </span><span style="color:#6c71c4;">0</span><span>;
+</span><span>  </span><span style="color:#268bd2;">int</span><span> high = limit_high </span><span style="color:#859900;">?</span><span> num2</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">]</span><span>-</span><span style="color:#839496;">&#39;</span><span style="color:#2aa198;">0</span><span style="color:#839496;">&#39; </span><span style="color:#859900;">: </span><span style="color:#6c71c4;">9</span><span>;
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">int</span><span> ret = </span><span style="color:#6c71c4;">0</span><span>;
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> d = low; d &lt;= high; d++) {
+</span><span>    ret = (ret + </span><span style="color:#b58900;">dfs</span><span>(i+</span><span style="color:#6c71c4;">1</span><span>, sum+d, limit_low &amp;&amp; d == low, limit_high &amp;&amp; d == high)) % mod;
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#859900;">if </span><span>(!limit_low &amp;&amp; !limit_high) memo</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">][</span><span>sum</span><span style="color:#268bd2;">] </span><span>= ret;
+</span><span>  </span><span style="color:#859900;">return</span><span> ret;
+</span><span>}
+</span></code></pre>
+<h2 id="graph">Graph</h2>
+<h3 id="shortest-path">Shortest Path</h3>
+<h4 id="bfs-breadth-first-traversal">BFS (Breadth-First Traversal)</h4>
+<ul>
+<li><a href="https://leetcode.cn/problems/shortest-path-visiting-all-nodes/">LC 847. Shortest Path Visiting All Nodes</a></li>
+<li><a href="https://leetcode.cn/problems/validate-binary-tree-nodes/?envType=daily-question&amp;envId=2023-10-16">LC 1361. Validate Binary Tree Nodes</a></li>
+<li><a href="https://leetcode.cn/problems/bus-routes/">LC 815. Bus Routes</a></li>
+</ul>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#268bd2;">void </span><span style="color:#b58900;">bfs</span><span>(vector&lt;vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt;&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">graph</span><span>) {
+</span><span>  </span><span style="color:#268bd2;">int</span><span> n = graph.</span><span style="color:#b58900;">size</span><span>();
+</span><span>  queue&lt;</span><span style="color:#268bd2;">int</span><span>&gt; q;
+</span><span>  vector&lt;</span><span style="color:#268bd2;">bool</span><span>&gt; </span><span style="color:#b58900;">vis</span><span>(n, </span><span style="color:#b58900;">false</span><span>);
+</span><span>  q.</span><span style="color:#b58900;">push</span><span>(start);
+</span><span>  vis</span><span style="color:#268bd2;">[</span><span>start</span><span style="color:#268bd2;">] </span><span>= </span><span style="color:#b58900;">true</span><span>;
+</span><span>
+</span><span>  </span><span style="color:#859900;">while </span><span>(!q.</span><span style="color:#b58900;">empty</span><span>()) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> c = q.</span><span style="color:#b58900;">front</span><span>();
+</span><span>    q.</span><span style="color:#b58900;">pop</span><span>();
+</span><span>    </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> adj </span><span style="color:#859900;">:</span><span> graph</span><span style="color:#268bd2;">[</span><span>c</span><span style="color:#268bd2;">]</span><span>) {
+</span><span>      </span><span style="color:#859900;">if </span><span>(!vis</span><span style="color:#268bd2;">[</span><span>adj</span><span style="color:#268bd2;">]</span><span>) {
+</span><span>        q.</span><span style="color:#b58900;">push</span><span>(adj);
+</span><span>        vis</span><span style="color:#268bd2;">[</span><span>adj</span><span style="color:#268bd2;">] </span><span>= </span><span style="color:#b58900;">true</span><span>;
+</span><span>      }
+</span><span>    }
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<h4 id="dijkstra">Dijkstra</h4>
+<ul>
+<li><a href="https://leetcode.cn/problems/design-graph-with-shortest-path-calculator/">LC 2642. Design Graph With Shortest Path Calculator</a></li>
+<li><a href="https://leetcode.cn/problems/number-of-ways-to-arrive-at-destination/">LC 1976. Number of Ways to Arrive at Destination</a></li>
+</ul>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#268bd2;">int </span><span style="color:#b58900;">dijkstra</span><span>(</span><span style="color:#268bd2;">int n</span><span>, </span><span style="color:#268bd2;">int start</span><span>, </span><span style="color:#268bd2;">int end</span><span>, vector&lt;vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt;&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">edges</span><span>) {
+</span><span>  </span><span style="color:#93a1a1;">// build graph
+</span><span>  vector&lt;vector&lt;pair&lt;</span><span style="color:#268bd2;">int</span><span>, </span><span style="color:#268bd2;">int</span><span>&gt;&gt;&gt; </span><span style="color:#b58900;">graph</span><span>(n);
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">auto </span><span style="color:#859900;">&amp;</span><span>edge </span><span style="color:#859900;">:</span><span> edges) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> from = edge</span><span style="color:#268bd2;">[</span><span style="color:#6c71c4;">0</span><span style="color:#268bd2;">]</span><span>, to = edge</span><span style="color:#268bd2;">[</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">]</span><span>, cost = edge</span><span style="color:#268bd2;">[</span><span style="color:#6c71c4;">2</span><span style="color:#268bd2;">]</span><span>;
+</span><span>    graph</span><span style="color:#268bd2;">[</span><span>from</span><span style="color:#268bd2;">]</span><span>.</span><span style="color:#b58900;">push_back</span><span>(</span><span style="color:#b58900;">make_pair</span><span>(to, cost));
+</span><span>  }
+</span><span>
+</span><span>
+</span><span>  vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#b58900;">dist</span><span>(n, INT_MAX);
+</span><span>  priority_queue&lt;vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt;, vector&lt;vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt;&gt;, greater&lt;vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt;&gt;&gt; pq;
+</span><span>  pq.</span><span style="color:#b58900;">push</span><span>({</span><span style="color:#6c71c4;">0</span><span>, start}); </span><span style="color:#93a1a1;">// cost, node
+</span><span>
+</span><span>  </span><span style="color:#859900;">while </span><span>(!pq.</span><span style="color:#b58900;">empty</span><span>()) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> curr_cost = pq.</span><span style="color:#b58900;">top</span><span>()</span><span style="color:#268bd2;">[</span><span style="color:#6c71c4;">0</span><span style="color:#268bd2;">]</span><span>;
+</span><span>    </span><span style="color:#268bd2;">int</span><span> curr_node = pq.</span><span style="color:#b58900;">top</span><span>()</span><span style="color:#268bd2;">[</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">]</span><span>;
+</span><span>    pq.</span><span style="color:#b58900;">pop</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#859900;">if </span><span>(curr_cost &gt; dist</span><span style="color:#268bd2;">[</span><span>curr_node</span><span style="color:#268bd2;">]</span><span>) {
+</span><span>      </span><span style="color:#859900;">continue</span><span>;
+</span><span>    }
+</span><span>    </span><span style="color:#859900;">if </span><span>(curr_node == end) {
+</span><span>      </span><span style="color:#859900;">return</span><span> curr_cost;
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">auto </span><span style="color:#859900;">&amp;</span><span>neighbor </span><span style="color:#859900;">:</span><span> graph</span><span style="color:#268bd2;">[</span><span>curr_node</span><span style="color:#268bd2;">]</span><span>) {
+</span><span>      </span><span style="color:#268bd2;">int</span><span> next_node = neighbor.</span><span style="color:#268bd2;">first</span><span>;
+</span><span>      </span><span style="color:#268bd2;">int</span><span> next_cost = curr_cost + neighbor.</span><span style="color:#268bd2;">second</span><span>;
+</span><span>
+</span><span>      </span><span style="color:#859900;">if </span><span>(next_cost &lt; dist</span><span style="color:#268bd2;">[</span><span>next_node</span><span style="color:#268bd2;">]</span><span>) {
+</span><span>        dist</span><span style="color:#268bd2;">[</span><span>next_node</span><span style="color:#268bd2;">] </span><span>= next_cost;
+</span><span>        pq.</span><span style="color:#b58900;">push</span><span>({next_cost, next_node});
+</span><span>      }
+</span><span>    }
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#859900;">return </span><span>-</span><span style="color:#6c71c4;">1</span><span>;
+</span><span>}
+</span></code></pre>
+<h4 id="floyd-warshall">Floyd–Warshall</h4>
+<ul>
+<li><a href="https://leetcode.cn/problems/design-graph-with-shortest-path-calculator/">LC 2642. Design Graph With Shortest Path Calculator</a></li>
+</ul>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#268bd2;">void </span><span style="color:#b58900;">floyd</span><span>(</span><span style="color:#268bd2;">int n</span><span>, vector&lt;vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt;&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">edges</span><span>) {
+</span><span>  vector&lt;vector&lt;</span><span style="color:#268bd2;">long</span><span>&gt;&gt; </span><span style="color:#b58900;">matrix</span><span>(n, </span><span style="color:#b58900;">vector</span><span>&lt;</span><span style="color:#268bd2;">long</span><span>&gt;(n, INT_MAX));
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">0</span><span>; i &lt; n; i++) {
+</span><span>    matrix</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">][</span><span>i</span><span style="color:#268bd2;">] </span><span>= </span><span style="color:#6c71c4;">0</span><span>;
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">auto </span><span style="color:#859900;">&amp;</span><span>edge </span><span style="color:#859900;">:</span><span> edges) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> from = edge</span><span style="color:#268bd2;">[</span><span style="color:#6c71c4;">0</span><span style="color:#268bd2;">]</span><span>, to = edge</span><span style="color:#268bd2;">[</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">]</span><span>, cost = edge</span><span style="color:#268bd2;">[</span><span style="color:#6c71c4;">2</span><span style="color:#268bd2;">]</span><span>;
+</span><span>    matrix</span><span style="color:#268bd2;">[</span><span>from</span><span style="color:#268bd2;">][</span><span>to</span><span style="color:#268bd2;">] </span><span>= cost;
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> k = </span><span style="color:#6c71c4;">0</span><span>; k &lt; n; k++) {
+</span><span>    </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">0</span><span>; i &lt; n; i++) {
+</span><span>      </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> j = </span><span style="color:#6c71c4;">0</span><span>; j &lt; n; j++) {
+</span><span>        </span><span style="color:#268bd2;">long</span><span> tmp = matrix</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">][</span><span>k</span><span style="color:#268bd2;">] </span><span>+ matrix</span><span style="color:#268bd2;">[</span><span>k</span><span style="color:#268bd2;">][</span><span>j</span><span style="color:#268bd2;">]</span><span>;
+</span><span>        matrix</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">][</span><span>j</span><span style="color:#268bd2;">] </span><span>= </span><span style="color:#b58900;">min</span><span>(matrix</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">][</span><span>j</span><span style="color:#268bd2;">]</span><span>, tmp);
+</span><span>      }
+</span><span>    }
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<h3 id="topological-sort">Topological Sort</h3>
+<ul>
+<li><a href="https://leetcode.cn/problems/sort-items-by-groups-respecting-dependencies/">LC 1203. Sort Items by Groups Respecting Dependencies</a></li>
+<li><a href="https://leetcode.cn/problems/collect-coins-in-a-tree/description/">LC 2603. Collect Coins in a Tree</a></li>
+<li><a href="https://leetcode.cn/problems/parallel-courses-iii/description/">LC 2050. Parallel Courses III</a></li>
+</ul>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span>vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#b58900;">topologicalSort</span><span>(</span><span style="color:#268bd2;">int n</span><span>, vector&lt;vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt;&gt; </span><span style="color:#268bd2;">edges</span><span>) {
+</span><span>  vector&lt;vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt;&gt; </span><span style="color:#b58900;">graph</span><span>(n, </span><span style="color:#b58900;">vector</span><span>&lt;</span><span style="color:#268bd2;">int</span><span>&gt;(n));
+</span><span>  vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#b58900;">indegree</span><span>(n);
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">auto </span><span style="color:#859900;">&amp;</span><span>edge </span><span style="color:#859900;">:</span><span> edges) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> u = edge</span><span style="color:#268bd2;">[</span><span style="color:#6c71c4;">0</span><span style="color:#268bd2;">]</span><span>, v = edge</span><span style="color:#268bd2;">[</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">]</span><span>;
+</span><span>    graph</span><span style="color:#268bd2;">[</span><span>u</span><span style="color:#268bd2;">]</span><span>.</span><span style="color:#b58900;">emplace_back</span><span>(v);
+</span><span>    indegree</span><span style="color:#268bd2;">[</span><span>v</span><span style="color:#268bd2;">]</span><span>++;
+</span><span>  }
+</span><span>
+</span><span>  queue&lt;</span><span style="color:#268bd2;">int</span><span>&gt; Q;
+</span><span>  vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; ret;
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">0</span><span>; i &lt; n; i++) {
+</span><span>    </span><span style="color:#859900;">if </span><span>(indegree</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">] </span><span>== </span><span style="color:#6c71c4;">0</span><span>) {
+</span><span>      Q.</span><span style="color:#b58900;">push</span><span>(i);
+</span><span>      ret.</span><span style="color:#b58900;">push_back</span><span>(i);
+</span><span>    }
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#859900;">while </span><span>(!Q.</span><span style="color:#b58900;">empty</span><span>()) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> size = Q.</span><span style="color:#b58900;">size</span><span>();
+</span><span>    </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">0</span><span>; i &lt; size; i++) {
+</span><span>      </span><span style="color:#268bd2;">int</span><span> u = Q.</span><span style="color:#b58900;">front</span><span>();
+</span><span>      Q.</span><span style="color:#b58900;">pop</span><span>();
+</span><span>      </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> v </span><span style="color:#859900;">:</span><span> graph</span><span style="color:#268bd2;">[</span><span>u</span><span style="color:#268bd2;">]</span><span>) {
+</span><span>        </span><span style="color:#859900;">if </span><span>(--indegree</span><span style="color:#268bd2;">[</span><span>v</span><span style="color:#268bd2;">] </span><span>== </span><span style="color:#6c71c4;">0</span><span>) {
+</span><span>          Q.</span><span style="color:#b58900;">push</span><span>(v);
+</span><span>          ret.</span><span style="color:#b58900;">push_back</span><span>(v);
+</span><span>        }
+</span><span>      }
+</span><span>    }
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#859900;">return</span><span> ret;
+</span><span>}
+</span></code></pre>
+<h3 id="union-find">Union Find</h3>
+<ul>
+<li><a href="https://leetcode.cn/problems/validate-binary-tree-nodes/?envType=daily-question&amp;envId=2023-10-16">LC 1361. Validate Binary Tree Nodes</a></li>
+</ul>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#268bd2;">class </span><span style="color:#b58900;">UnionFind </span><span>{
+</span><span style="color:#859900;">private</span><span>:
+</span><span>  vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; parent; </span><span style="color:#93a1a1;">// Parent array to represent sets
+</span><span>  vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; rank;   </span><span style="color:#93a1a1;">// Rank to optimize union by rank
+</span><span>
+</span><span style="color:#859900;">public</span><span>:
+</span><span>  </span><span style="color:#b58900;">UnionFind</span><span>(</span><span style="color:#268bd2;">int n</span><span>) {
+</span><span>    parent.</span><span style="color:#b58900;">resize</span><span>(n);
+</span><span>    rank.</span><span style="color:#b58900;">resize</span><span>(n, </span><span style="color:#6c71c4;">0</span><span>);
+</span><span>    </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">0</span><span>; i &lt; n; i++) {
+</span><span>      parent</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">] </span><span>= i; </span><span style="color:#93a1a1;">// Initialize each element as a separate set
+</span><span>    }
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">int </span><span style="color:#b58900;">find</span><span>(</span><span style="color:#268bd2;">int x</span><span>) {
+</span><span>    </span><span style="color:#859900;">if </span><span>(parent</span><span style="color:#268bd2;">[</span><span>x</span><span style="color:#268bd2;">] </span><span>== x) {
+</span><span>      </span><span style="color:#859900;">return</span><span> x;
+</span><span>    }
+</span><span>    </span><span style="color:#859900;">return</span><span> parent</span><span style="color:#268bd2;">[</span><span>x</span><span style="color:#268bd2;">] </span><span>= </span><span style="color:#b58900;">find</span><span>(parent</span><span style="color:#268bd2;">[</span><span>x</span><span style="color:#268bd2;">]</span><span>); </span><span style="color:#93a1a1;">// Path compression
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">bool </span><span style="color:#b58900;">unionSets</span><span>(</span><span style="color:#268bd2;">int x</span><span>, </span><span style="color:#268bd2;">int y</span><span>) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> rootX = </span><span style="color:#b58900;">find</span><span>(x);
+</span><span>    </span><span style="color:#268bd2;">int</span><span> rootY = </span><span style="color:#b58900;">find</span><span>(y);
+</span><span>
+</span><span>    </span><span style="color:#859900;">if </span><span>(rootX == rootY) {
+</span><span>      </span><span style="color:#859900;">return </span><span style="color:#b58900;">false</span><span>; </span><span style="color:#93a1a1;">// Elements are already in the same set
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#93a1a1;">// Union by rank to keep the tree flat
+</span><span>    </span><span style="color:#859900;">if </span><span>(rank</span><span style="color:#268bd2;">[</span><span>rootX</span><span style="color:#268bd2;">] </span><span>&lt; rank</span><span style="color:#268bd2;">[</span><span>rootY</span><span style="color:#268bd2;">]</span><span>) {
+</span><span>      parent</span><span style="color:#268bd2;">[</span><span>rootX</span><span style="color:#268bd2;">] </span><span>= rootY;
+</span><span>    } </span><span style="color:#859900;">else if </span><span>(rank</span><span style="color:#268bd2;">[</span><span>rootX</span><span style="color:#268bd2;">] </span><span>&gt; rank</span><span style="color:#268bd2;">[</span><span>rootY</span><span style="color:#268bd2;">]</span><span>) {
+</span><span>      parent</span><span style="color:#268bd2;">[</span><span>rootY</span><span style="color:#268bd2;">] </span><span>= rootX;
+</span><span>    } </span><span style="color:#859900;">else </span><span>{
+</span><span>      parent</span><span style="color:#268bd2;">[</span><span>rootY</span><span style="color:#268bd2;">] </span><span>= rootX;
+</span><span>      rank</span><span style="color:#268bd2;">[</span><span>rootX</span><span style="color:#268bd2;">]</span><span>++;
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#859900;">return </span><span style="color:#b58900;">true</span><span>; </span><span style="color:#93a1a1;">// Elements were successfully united
+</span><span>  }
+</span><span>};
+</span></code></pre>
+<h2 id="prefix-sum">Prefix Sum</h2>
+<h3 id="two-dimension-prefix-sum">Two-dimension Prefix Sum</h3>
+<ul>
+<li><a href="https://leetcode.cn/problems/number-of-ways-of-cutting-a-pizza/description/">LC 1444. Number of Ways of Cutting a Pizza</a></li>
+</ul>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#268bd2;">class </span><span style="color:#b58900;">MatrixSum </span><span>{
+</span><span style="color:#859900;">private</span><span>:
+</span><span>  vector&lt;vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt;&gt; sum;
+</span><span>
+</span><span style="color:#859900;">public</span><span>:
+</span><span>  </span><span style="color:#b58900;">MatrixSum</span><span>(vector&lt;string&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">maxtrix</span><span>) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> n = maxtrix.</span><span style="color:#b58900;">size</span><span>();
+</span><span>    </span><span style="color:#268bd2;">int</span><span> m = maxtrix</span><span style="color:#268bd2;">[</span><span style="color:#6c71c4;">0</span><span style="color:#268bd2;">]</span><span>.</span><span style="color:#b58900;">size</span><span>();
+</span><span>    sum = </span><span style="color:#b58900;">vector</span><span>&lt;vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt;&gt;(n + </span><span style="color:#6c71c4;">1</span><span>, </span><span style="color:#b58900;">vector</span><span>(m + </span><span style="color:#6c71c4;">1</span><span>, </span><span style="color:#6c71c4;">0</span><span>));
+</span><span>
+</span><span>    </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">0</span><span>; i &lt; n; i++) {
+</span><span>      </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> j = </span><span style="color:#6c71c4;">0</span><span>; j &lt; m; j++) {
+</span><span>        sum</span><span style="color:#268bd2;">[</span><span>i+</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">][</span><span>j+</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">] </span><span>= sum</span><span style="color:#268bd2;">[</span><span>i+</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">][</span><span>j</span><span style="color:#268bd2;">] </span><span>+ sum</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">][</span><span>j+</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">] </span><span>- sum</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">][</span><span>j</span><span style="color:#268bd2;">] </span><span>+ (maxtrix</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">][</span><span>j</span><span style="color:#268bd2;">]</span><span style="color:#859900;">&amp;</span><span style="color:#6c71c4;">1</span><span>);
+</span><span>      }
+</span><span>    }
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#93a1a1;">/*   返回左上角在 (r1,c1) 右下角在 (r2-1,c2-1) 的子矩阵元素和   */
+</span><span>  </span><span style="color:#268bd2;">int </span><span style="color:#b58900;">query</span><span>(</span><span style="color:#268bd2;">int r1</span><span>, </span><span style="color:#268bd2;">int c1</span><span>, </span><span style="color:#268bd2;">int r2</span><span>, </span><span style="color:#268bd2;">int c2</span><span>) {
+</span><span>    </span><span style="color:#859900;">return</span><span> sum</span><span style="color:#268bd2;">[</span><span>r2</span><span style="color:#268bd2;">][</span><span>c2</span><span style="color:#268bd2;">] </span><span>- sum</span><span style="color:#268bd2;">[</span><span>r2</span><span style="color:#268bd2;">][</span><span>c1</span><span style="color:#268bd2;">] </span><span>- sum</span><span style="color:#268bd2;">[</span><span>r1</span><span style="color:#268bd2;">][</span><span>c2</span><span style="color:#268bd2;">] </span><span>+ sum</span><span style="color:#268bd2;">[</span><span>r1</span><span style="color:#268bd2;">][</span><span>c1</span><span style="color:#268bd2;">]</span><span>;
+</span><span>  }
+</span><span>};
+</span></code></pre>
+<h2 id="sliding-window">Sliding Window</h2>
+<ul>
+<li><a href="https://leetcode.cn/problems/maximum-sum-of-3-non-overlapping-subarrays/description/">LC 689. Maximum Sum of 3 Non-Overlapping Subarrays</a></li>
+</ul>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#268bd2;">void </span><span style="color:#b58900;">slidingWindow</span><span>(</span><span style="color:#859900;">const</span><span> vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">nums</span><span>, </span><span style="color:#268bd2;">int k</span><span>) {
+</span><span>  </span><span style="color:#268bd2;">int</span><span> n = nums.</span><span style="color:#b58900;">size</span><span>();
+</span><span>
+</span><span>  </span><span style="color:#93a1a1;">// Initialize variables for the sliding window
+</span><span>  </span><span style="color:#268bd2;">int</span><span> left = </span><span style="color:#6c71c4;">0</span><span>, right = </span><span style="color:#6c71c4;">0</span><span>;
+</span><span>  </span><span style="color:#93a1a1;">// Other variables based on the problem requirements
+</span><span>
+</span><span>  </span><span style="color:#859900;">while </span><span>(right &lt; n) {
+</span><span>    </span><span style="color:#93a1a1;">// Expand the window to the right
+</span><span>    </span><span style="color:#93a1a1;">// Modify other variables based on the problem requirements
+</span><span>
+</span><span>    </span><span style="color:#93a1a1;">// Check if the window size is greater than k
+</span><span>    </span><span style="color:#859900;">while </span><span>(</span><span style="color:#93a1a1;">/* Check if the window size is greater than k */</span><span>) {
+</span><span>      </span><span style="color:#93a1a1;">// Shrink the window from the left
+</span><span>      </span><span style="color:#93a1a1;">// Modify other variables based on the problem requirements
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#93a1a1;">// Update the result if needed
+</span><span>
+</span><span>    </span><span style="color:#93a1a1;">// Move the window to the right
+</span><span>    ++right;
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<h2 id="stack">Stack</h2>
+<h3 id="monotonic-stack">Monotonic Stack</h3>
+<ul>
+<li><a href="https://leetcode.cn/problems/remove-duplicate-letters/">LC 316. Remove Duplicate Letters</a></li>
+<li><a href="https://leetcode.cn/problems/maximum-score-of-a-good-subarray/">LC 1793. Maximum Score of a Good Subarray</a></li>
+<li><a href="https://leetcode.cn/problems/maximum-sum-queries/description/">LC 2736. Maximum Sum Queries</a></li>
+</ul>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#268bd2;">void </span><span style="color:#b58900;">monotonicStack</span><span>(vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">nums</span><span>) {
+</span><span>  stack&lt;</span><span style="color:#268bd2;">int</span><span>&gt; st;
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> num </span><span style="color:#859900;">:</span><span> nums) {
+</span><span>    </span><span style="color:#93a1a1;">// if you want to keep a monotonically increasing stack
+</span><span>    </span><span style="color:#93a1a1;">// replace `num &lt; st.top()` with `num &gt; st.top()`
+</span><span>    </span><span style="color:#859900;">while </span><span>(!st.</span><span style="color:#b58900;">empty</span><span>() &amp;&amp; num &lt; st.</span><span style="color:#b58900;">top</span><span>()) {
+</span><span>      st.</span><span style="color:#b58900;">pop</span><span>();
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#93a1a1;">// since num is greater or equal to st.top()
+</span><span>    </span><span style="color:#93a1a1;">// stack structure is first in last out
+</span><span>    </span><span style="color:#93a1a1;">// so, we will get the greatest num at the top
+</span><span>    st.</span><span style="color:#b58900;">push</span><span>(num);
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<h2 id="string">String</h2>
+<h3 id="lcs-the-longest-common-subsequence">LCS (The Longest Common Subsequence)</h3>
+<ul>
+<li><a href="https://leetcode.cn/problems/minimum-ascii-delete-sum-for-two-strings/">LC 712. Minimum ASCII Delete Sum for Two Strings</a></li>
+</ul>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#268bd2;">int </span><span style="color:#b58900;">LCS</span><span>(string </span><span style="color:#268bd2;">s1</span><span>, string </span><span style="color:#268bd2;">s2</span><span>) {
+</span><span>  </span><span style="color:#268bd2;">int</span><span> n = s1.</span><span style="color:#b58900;">size</span><span>();
+</span><span>  </span><span style="color:#268bd2;">int</span><span> m = s2.</span><span style="color:#b58900;">size</span><span>();
+</span><span>  vector&lt;vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt;&gt; </span><span style="color:#b58900;">dp</span><span>(n + </span><span style="color:#6c71c4;">1</span><span>, </span><span style="color:#b58900;">vector</span><span>&lt;</span><span style="color:#268bd2;">int</span><span>&gt;(m + </span><span style="color:#6c71c4;">1</span><span>, </span><span style="color:#6c71c4;">0</span><span>));
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">1</span><span>; i &lt;= s1.</span><span style="color:#b58900;">size</span><span>(); i++) {
+</span><span>    </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> j = </span><span style="color:#6c71c4;">1</span><span>; j &lt;= s2.</span><span style="color:#b58900;">size</span><span>(); j++) {
+</span><span>      </span><span style="color:#859900;">if </span><span>(s1</span><span style="color:#268bd2;">[</span><span>i-</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">] </span><span>== s2</span><span style="color:#268bd2;">[</span><span>j-</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">]</span><span>) {
+</span><span>        dp</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">][</span><span>j</span><span style="color:#268bd2;">] </span><span>= dp</span><span style="color:#268bd2;">[</span><span>i-</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">][</span><span>j-</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">] </span><span>+ </span><span style="color:#6c71c4;">1</span><span>;
+</span><span>      } </span><span style="color:#859900;">else </span><span>{
+</span><span>        dp</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">][</span><span>j</span><span style="color:#268bd2;">] </span><span>= </span><span style="color:#b58900;">min</span><span>(dp</span><span style="color:#268bd2;">[</span><span>i-</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">][</span><span>j</span><span style="color:#268bd2;">]</span><span>, dp</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">][</span><span>j-</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">]</span><span>) + </span><span style="color:#6c71c4;">1</span><span>;
+</span><span>      }
+</span><span>    }
+</span><span>  }
+</span><span>  </span><span style="color:#859900;">return</span><span> dp</span><span style="color:#268bd2;">[</span><span>n</span><span style="color:#268bd2;">][</span><span>m</span><span style="color:#268bd2;">]</span><span>;
+</span><span>}
+</span></code></pre>
+<h2 id="tree">Tree</h2>
+<h3 id="lca-lowest-common-ancestor">LCA (Lowest Common Ancestor)</h3>
+<ul>
+<li><a href="https://leetcode.cn/problems/kth-ancestor-of-a-tree-node/">LC 1483. Kth Ancestor of a Tree Node</a></li>
+<li><a href="https://leetcode.cn/problems/minimum-edge-weight-equilibrium-queries-in-a-tree/">LC 2846. Minimum Edge Weight Equilibrium Queries in a Tree</a></li>
+</ul>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#268bd2;">class </span><span style="color:#b58900;">TreeAncestor </span><span>{
+</span><span style="color:#859900;">private</span><span>:
+</span><span>  vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; depth;
+</span><span>  vector&lt;vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt;&gt; pa;
+</span><span>
+</span><span style="color:#859900;">public</span><span>:
+</span><span>  </span><span style="color:#b58900;">TreeAncestor</span><span>(vector&lt;pair&lt;</span><span style="color:#268bd2;">int</span><span>, </span><span style="color:#268bd2;">int</span><span>&gt;&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">edges</span><span>) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> n = edges.</span><span style="color:#b58900;">size</span><span>();
+</span><span>    </span><span style="color:#268bd2;">int</span><span> m = </span><span style="color:#6c71c4;">32 </span><span>- </span><span style="color:#b58900;">__builtin_clz</span><span>(n); </span><span style="color:#93a1a1;">// the length of binary n
+</span><span>    vector&lt;vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt;&gt; </span><span style="color:#b58900;">g</span><span>(n);
+</span><span>    </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">auto [</span><span>a, b</span><span style="color:#268bd2;">] </span><span style="color:#859900;">:</span><span> edges) {
+</span><span>      g</span><span style="color:#268bd2;">[</span><span>a</span><span style="color:#268bd2;">]</span><span>.</span><span style="color:#b58900;">push_back</span><span>(b);
+</span><span>      g</span><span style="color:#268bd2;">[</span><span>b</span><span style="color:#268bd2;">]</span><span>.</span><span style="color:#b58900;">push_back</span><span>(a);
+</span><span>    }
+</span><span>
+</span><span>    depth.</span><span style="color:#b58900;">resize</span><span>(n);
+</span><span>    pa.</span><span style="color:#b58900;">resize</span><span>(n, </span><span style="color:#b58900;">vector</span><span>&lt;</span><span style="color:#268bd2;">int</span><span>&gt;(m, -</span><span style="color:#6c71c4;">1</span><span>));
+</span><span>    function&lt;</span><span style="color:#268bd2;">void</span><span>(</span><span style="color:#268bd2;">int</span><span>, </span><span style="color:#268bd2;">int</span><span>)&gt; dfs = </span><span style="color:#268bd2;">[</span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">]</span><span>(</span><span style="color:#268bd2;">int</span><span> x, </span><span style="color:#268bd2;">int</span><span> parent) -&gt; </span><span style="color:#268bd2;">void </span><span>{
+</span><span>      pa</span><span style="color:#268bd2;">[</span><span>x</span><span style="color:#268bd2;">][</span><span style="color:#6c71c4;">0</span><span style="color:#268bd2;">] </span><span>= parent;
+</span><span>      </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> next </span><span style="color:#859900;">:</span><span> g</span><span style="color:#268bd2;">[</span><span>x</span><span style="color:#268bd2;">]</span><span>) {
+</span><span>        </span><span style="color:#859900;">if </span><span>(next != parent) {
+</span><span>          depth</span><span style="color:#268bd2;">[</span><span>next</span><span style="color:#268bd2;">] </span><span>= depth</span><span style="color:#268bd2;">[</span><span>x</span><span style="color:#268bd2;">] </span><span>+ </span><span style="color:#6c71c4;">1</span><span>;
+</span><span>          </span><span style="color:#b58900;">dfs</span><span>(next, x);
+</span><span>        }
+</span><span>      }
+</span><span>    };
+</span><span>    </span><span style="color:#b58900;">dfs</span><span>(</span><span style="color:#6c71c4;">0</span><span>, -</span><span style="color:#6c71c4;">1</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">0</span><span>; i &lt; m - </span><span style="color:#6c71c4;">1</span><span>; i++) {
+</span><span>      </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> x = </span><span style="color:#6c71c4;">0</span><span>; x &lt; n; x++) {
+</span><span>        </span><span style="color:#268bd2;">int</span><span> p = pa</span><span style="color:#268bd2;">[</span><span>x</span><span style="color:#268bd2;">][</span><span>i</span><span style="color:#268bd2;">]</span><span>;
+</span><span>        </span><span style="color:#859900;">if </span><span>(p != -</span><span style="color:#6c71c4;">1</span><span>) pa</span><span style="color:#268bd2;">[</span><span>x</span><span style="color:#268bd2;">][</span><span>i+</span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">] </span><span>= pa</span><span style="color:#268bd2;">[</span><span>p</span><span style="color:#268bd2;">][</span><span>i</span><span style="color:#268bd2;">]</span><span>;
+</span><span>      }
+</span><span>    }
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">int </span><span style="color:#b58900;">get_kth_ancestor</span><span>(</span><span style="color:#268bd2;">int node</span><span>, </span><span style="color:#268bd2;">int k</span><span>) {
+</span><span>    </span><span style="color:#859900;">while </span><span>(k &gt; </span><span style="color:#6c71c4;">0</span><span>) {
+</span><span>      node = pa</span><span style="color:#268bd2;">[</span><span>node</span><span style="color:#268bd2;">][</span><span style="color:#b58900;">__builtin_clz</span><span>(k)</span><span style="color:#268bd2;">]</span><span>;
+</span><span>      k &amp;= k - </span><span style="color:#6c71c4;">1</span><span>; </span><span style="color:#93a1a1;">// make the lowbit set to 0
+</span><span>    }
+</span><span>    </span><span style="color:#859900;">return</span><span> node;
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">int </span><span style="color:#b58900;">get_cla</span><span>(</span><span style="color:#268bd2;">int x</span><span>, </span><span style="color:#268bd2;">int y</span><span>) {
+</span><span>    </span><span style="color:#859900;">if </span><span>(depth</span><span style="color:#268bd2;">[</span><span>x</span><span style="color:#268bd2;">] </span><span>&gt; depth</span><span style="color:#268bd2;">[</span><span>y</span><span style="color:#268bd2;">]</span><span>) </span><span style="color:#b58900;">swap</span><span>(x, y);
+</span><span>
+</span><span>    y = </span><span style="color:#b58900;">get_kth_ancestor</span><span>(y, depth</span><span style="color:#268bd2;">[</span><span>y</span><span style="color:#268bd2;">] </span><span>- depth</span><span style="color:#268bd2;">[</span><span>x</span><span style="color:#268bd2;">]</span><span>); </span><span style="color:#93a1a1;">// make x and y in the same depth
+</span><span>    </span><span style="color:#859900;">if </span><span>(x == y) </span><span style="color:#859900;">return</span><span> x;
+</span><span>
+</span><span>    </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = pa</span><span style="color:#268bd2;">[</span><span>x</span><span style="color:#268bd2;">]</span><span>.</span><span style="color:#b58900;">size</span><span>() - </span><span style="color:#6c71c4;">1</span><span>; i &gt;= </span><span style="color:#6c71c4;">0</span><span>; i--) {
+</span><span>      </span><span style="color:#268bd2;">int</span><span> px = pa</span><span style="color:#268bd2;">[</span><span>x</span><span style="color:#268bd2;">][</span><span>i</span><span style="color:#268bd2;">]</span><span>, py = pa</span><span style="color:#268bd2;">[</span><span>y</span><span style="color:#268bd2;">][</span><span>i</span><span style="color:#268bd2;">]</span><span>;
+</span><span>      </span><span style="color:#859900;">if </span><span>(px != py) {
+</span><span>        x = px;
+</span><span>        y = py;
+</span><span>      }
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#859900;">return</span><span> pa</span><span style="color:#268bd2;">[</span><span>x</span><span style="color:#268bd2;">][</span><span style="color:#6c71c4;">0</span><span style="color:#268bd2;">]</span><span>;
+</span><span>  }
+</span><span>};
+</span></code></pre>
+<h3 id="prefix-tree-trie">Prefix Tree (Trie)</h3>
+<ul>
+<li><a href="https://leetcode.cn/problems/extra-characters-in-a-string/">LC 2707. Extra Characters in a String</a></li>
+</ul>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#cb4b16;">#include </span><span style="color:#839496;">&lt;</span><span style="color:#2aa198;">iostream</span><span style="color:#839496;">&gt;
+</span><span style="color:#cb4b16;">#include </span><span style="color:#839496;">&lt;</span><span style="color:#2aa198;">unordered_map</span><span style="color:#839496;">&gt;
+</span><span>
+</span><span style="color:#268bd2;">class </span><span style="color:#b58900;">TrieNode </span><span>{
+</span><span style="color:#859900;">public</span><span>:
+</span><span>  </span><span style="color:#268bd2;">bool</span><span> is_word;
+</span><span>  std::unordered_map&lt;</span><span style="color:#268bd2;">char</span><span>, TrieNode </span><span style="color:#859900;">*</span><span>&gt; children;
+</span><span>  </span><span style="color:#b58900;">TrieNode</span><span>() : </span><span style="color:#268bd2;">is_word</span><span>(</span><span style="color:#b58900;">false</span><span>) {}
+</span><span>};
+</span><span>
+</span><span style="color:#268bd2;">class </span><span style="color:#b58900;">Trie </span><span>{
+</span><span style="color:#859900;">private</span><span>:
+</span><span>  TrieNode </span><span style="color:#859900;">*</span><span>root;
+</span><span>  </span><span style="color:#268bd2;">void </span><span style="color:#b58900;">deleteTrie</span><span>(TrieNode </span><span style="color:#859900;">*</span><span style="color:#268bd2;">node</span><span>) {
+</span><span>    </span><span style="color:#859900;">if </span><span>(node) {
+</span><span>      </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">auto </span><span style="color:#859900;">&amp;</span><span>kv </span><span style="color:#859900;">:</span><span> node-&gt;</span><span style="color:#268bd2;">children</span><span>) {
+</span><span>        </span><span style="color:#b58900;">deleteTrie</span><span>(kv.</span><span style="color:#268bd2;">second</span><span>);
+</span><span>      }
+</span><span>      </span><span style="color:#859900;">delete</span><span> node;
+</span><span>    }
+</span><span>  }
+</span><span>
+</span><span style="color:#859900;">public</span><span>:
+</span><span>  </span><span style="color:#b58900;">Trie</span><span>() {
+</span><span>    root = </span><span style="color:#859900;">new </span><span style="color:#b58900;">TrieNode</span><span>();
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#b58900;">~Trie</span><span>() {
+</span><span>    </span><span style="color:#b58900;">deleteTrie</span><span>(root);
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">void </span><span style="color:#b58900;">insert</span><span>(</span><span style="color:#859900;">const</span><span> std::string </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">word</span><span>) {
+</span><span>    TrieNode </span><span style="color:#859900;">*</span><span>current = root;
+</span><span>    </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">char</span><span> c </span><span style="color:#859900;">:</span><span> word) {
+</span><span>      </span><span style="color:#859900;">if </span><span>(current-&gt;</span><span style="color:#268bd2;">children</span><span>.</span><span style="color:#b58900;">find</span><span>(c) == current-&gt;</span><span style="color:#268bd2;">children</span><span>.</span><span style="color:#b58900;">end</span><span>()) {
+</span><span>        current-&gt;</span><span style="color:#268bd2;">children[</span><span>c</span><span style="color:#268bd2;">] </span><span>= </span><span style="color:#859900;">new </span><span style="color:#b58900;">TrieNode</span><span>();
+</span><span>      }
+</span><span>      current = current-&gt;</span><span style="color:#268bd2;">children[</span><span>c</span><span style="color:#268bd2;">]</span><span>;
+</span><span>    }
+</span><span>    current-&gt;</span><span style="color:#268bd2;">is_word </span><span>= </span><span style="color:#b58900;">true</span><span>;
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">bool </span><span style="color:#b58900;">search</span><span>(</span><span style="color:#859900;">const</span><span> std::string </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">word</span><span>) {
+</span><span>    TrieNode </span><span style="color:#859900;">*</span><span>current = root;
+</span><span>    </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">char</span><span> c </span><span style="color:#859900;">:</span><span> word) {
+</span><span>      </span><span style="color:#859900;">if </span><span>(current-&gt;</span><span style="color:#268bd2;">children</span><span>.</span><span style="color:#b58900;">find</span><span>(c) == current-&gt;</span><span style="color:#268bd2;">children</span><span>.</span><span style="color:#b58900;">end</span><span>()) {
+</span><span>        </span><span style="color:#859900;">return </span><span style="color:#b58900;">false</span><span>;
+</span><span>      }
+</span><span>      current = current-&gt;</span><span style="color:#268bd2;">children[</span><span>c</span><span style="color:#268bd2;">]</span><span>;
+</span><span>    }
+</span><span>    </span><span style="color:#859900;">return</span><span> current-&gt;</span><span style="color:#268bd2;">is_word</span><span>;
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">bool </span><span style="color:#b58900;">start_with</span><span>(</span><span style="color:#859900;">const</span><span> std::string </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">prefix</span><span>) {
+</span><span>    TrieNode </span><span style="color:#859900;">*</span><span>current = root;
+</span><span>    </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">char</span><span> c </span><span style="color:#859900;">:</span><span> prefix) {
+</span><span>      </span><span style="color:#859900;">if </span><span>(current-&gt;</span><span style="color:#268bd2;">children</span><span>.</span><span style="color:#b58900;">find</span><span>(c) == current-&gt;</span><span style="color:#268bd2;">children</span><span>.</span><span style="color:#b58900;">end</span><span>()) {
+</span><span>        </span><span style="color:#859900;">return </span><span style="color:#b58900;">false</span><span>;
+</span><span>      }
+</span><span>      current = current-&gt;</span><span style="color:#268bd2;">children[</span><span>c</span><span style="color:#268bd2;">]</span><span>;
+</span><span>    }
+</span><span>    </span><span style="color:#859900;">return </span><span style="color:#b58900;">true</span><span>;
+</span><span>  }
+</span><span>};
+</span></code></pre>
+
+
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>fhawk12&#x27;s blog</title>
+</head>
+<body>
+  <header class="nav-bar">
+    
+<nav>
+  <ul>
+    
+    <li><a href="&#x2F;posts">posts</a></li>
+    
+    <li><a href="&#x2F;tags">tags</a></li>
+    
+    <li><a href="&#x2F;archive">archive</a></li>
+    
+  </ul>
+</nav>
+
+
+  </header>
+  <main class="content">
+    
+
+<h1 class="title">
+  Archlinux Automatic Login
+</h1>
+<p class="subtitle"><strong>2023-09-18</strong></p>
+
+
+
+<p>In most cases, you want to set up automatic login on a virtual console, (whose device name is ttyN, where N is a number). The configuration of automatic login for serial consoles will be slightly different. Device names of the serial consoles look like ttySN, where N is a number.</p>
+<p>Execute <code>systemctl edit getty@tty1</code> or <code>vim /etc/systemd/system/getty.target.wants/getty@tty1.service</code> with the following content:</p>
+<pre data-lang="bash" style="background-color:#fdf6e3;color:#657b83;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#b58900;">/etc/systemd/system/getty@tty1.service.d/autologin.conf
+</span><span>
+</span><span style="color:#b58900;">[Service]
+</span><span style="color:#268bd2;">ExecStart</span><span>=</span><span style="color:#2aa198;">-/sbin/agetty </span><span style="color:#b58900;">-o </span><span style="color:#839496;">&#39;</span><span style="color:#2aa198;">-p -f -- \\u</span><span style="color:#839496;">&#39;</span><span style="color:#268bd2;"> --noclear --autologin</span><span> username </span><span style="color:#859900;">%</span><span style="color:#268bd2;">I </span><span style="color:#859900;">$</span><span style="color:#268bd2;">TERM
+</span></code></pre>
+<blockquote>
+<p>Tips: Don't reboot immediately, use <code>clt+alt+F2</code> switch to tty2 and see whether it is successful or not</p>
+</blockquote>
+<h1 id="resources">Resources</h1>
+<ol>
+<li><a href="https://wiki.archlinux.org/title/Getty">https://wiki.archlinux.org/title/Getty</a></li>
+</ol>
+
+
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>fhawk12&#x27;s blog</title>
+</head>
+<body>
+  <header class="nav-bar">
+    
+<nav>
+  <ul>
+    
+    <li><a href="&#x2F;posts">posts</a></li>
+    
+    <li><a href="&#x2F;tags">tags</a></li>
+    
+    <li><a href="&#x2F;archive">archive</a></li>
+    
+  </ul>
+</nav>
+
+
+  </header>
+  <main class="content">
+    
+
+<h1 class="title">
+  Git Cannot Push
+</h1>
+<p class="subtitle"><strong>2024-01-21</strong></p>
+
+
+
+<p>when you execute the command <code>git push</code>, maybe will show the message</p>
+<pre data-lang="bash" style="background-color:#fdf6e3;color:#657b83;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#b58900;">ssh:</span><span> connect to host github.com port 22: Connection timed out fatal: Could not from remote repository.
+</span><span>
+</span><span style="color:#b58900;">Please</span><span> make sure you have the correct access rights
+</span><span>
+</span><span style="color:#b58900;">and</span><span> the repository exists.
+</span></code></pre>
+<p>add file to ~/.ssh/config and edit it to solve it</p>
+<pre data-lang="bash" style="background-color:#fdf6e3;color:#657b83;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#b58900;">Host</span><span> github.com
+</span><span>    </span><span style="color:#b58900;">Hostname</span><span> ssh.github.com
+</span><span>    </span><span style="color:#b58900;">Port</span><span> 443
+</span><span>    </span><span style="color:#b58900;">User</span><span> git
+</span></code></pre>
+
+
+
+  </main>
+</body>
+</html>

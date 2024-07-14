@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>fhawk12&#x27;s blog - linux</title>
+    <link rel="self" type="application/atom+xml" href="https://fhawk12.github.io/tags/linux/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://fhawk12.github.io/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-09-18T00:00:00+00:00</updated>
+    <id>https://fhawk12.github.io/tags/linux/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Repair Grub Boot</title>
+        <published>2023-09-18T00:00:00+00:00</published>
+        <updated>2023-09-18T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              fhawk12
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://fhawk12.github.io/posts/repair-grub-boot/"/>
+        <id>https://fhawk12.github.io/posts/repair-grub-boot/</id>
+        
+        <content type="html" xml:base="https://fhawk12.github.io/posts/repair-grub-boot/">&lt;p&gt;Many times, especailly after linux resizes the partition, it will appear when booting&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;error&lt;&#x2F;span&gt;&lt;span&gt; : unknow filesystem
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;grub&lt;&#x2F;span&gt;&lt;span&gt; rescue&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This is indicates that your grub configuration file is broken due to partition adjustment or partition UUID change, and grub cannot start normally. Thus entering the repair mode (grub rescue), also known as rescue mode.&lt;&#x2F;p&gt;
+&lt;p&gt;Only a few commands are available in rescue mode: ls, insmod, root, prefix, set&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;set: show environment variables&lt;&#x2F;li&gt;
+&lt;li&gt;ls: display the partition specified&lt;&#x2F;li&gt;
+&lt;li&gt;insmod: load module&lt;&#x2F;li&gt;
+&lt;li&gt;root: set boot the system partition&lt;&#x2F;li&gt;
+&lt;li&gt;prefix: set grub booting path&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;check-partition&quot;&gt;Check Partition&lt;&#x2F;h2&gt;
+&lt;p&gt;Display all partition on your computer&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;grub&lt;&#x2F;span&gt;&lt;span&gt; rescue&amp;gt; ls
+&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;hd0&lt;&#x2F;span&gt;&lt;span&gt;) (hd0,msdos9) (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;hd0,msdos8&lt;&#x2F;span&gt;&lt;span&gt;) (hd0,msdos7) (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;hd0,msdos6&lt;&#x2F;span&gt;&lt;span&gt;) (hd0,msdos5) (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;hd0,msdos2&lt;&#x2F;span&gt;&lt;span&gt;) (hd0,msdos1)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;find-linux-grub&quot;&gt;Find Linux Grub&lt;&#x2F;h2&gt;
+&lt;p&gt;If show &lt;code&gt;unknow filesystem&lt;&#x2F;code&gt;, just try next one by one until show the name of your folder and flies on screen&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;grub&lt;&#x2F;span&gt;&lt;span&gt; rescue&amp;gt; ls (hd0,msdos1)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;or
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;grub&lt;&#x2F;span&gt;&lt;span&gt; rescue&amp;gt; ls (hd0,msdos1)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;&#x2F;boot&#x2F;grub
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;modify-booting-partition&quot;&gt;Modify Booting Partition&lt;&#x2F;h2&gt;
+&lt;p&gt;Assume your grub locates partition (hd0, msdos1)&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;grub&lt;&#x2F;span&gt;&lt;span&gt; rescue&amp;gt; set root=(hd0,msdos1)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;grub&lt;&#x2F;span&gt;&lt;span&gt; rescue&amp;gt; set prefix=(hd0,msdos1)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;&#x2F;boot&#x2F;grub
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;set-grub-to-normal-mode&quot;&gt;Set Grub To Normal Mode&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;grub&lt;&#x2F;span&gt;&lt;span&gt; rescue&amp;gt; insmod normal
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;grub&lt;&#x2F;span&gt;&lt;span&gt; rescue&amp;gt; normal
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now, you are in normal mode and can access your system&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;update-grub&quot;&gt;Update Grub&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; update-grub
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; grub-install &#x2F;dev&#x2F;sda
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        
+    </entry>
+</feed>

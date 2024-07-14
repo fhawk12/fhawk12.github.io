@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>fhawk12&#x27;s blog</title>
+</head>
+<body>
+  <header class="nav-bar">
+    
+<nav>
+  <ul>
+    
+    <li><a href="&#x2F;posts">posts</a></li>
+    
+    <li><a href="&#x2F;tags">tags</a></li>
+    
+    <li><a href="&#x2F;archive">archive</a></li>
+    
+  </ul>
+</nav>
+
+
+  </header>
+  <main class="content">
+    
+
+<h1 class="title">
+  B Tree
+</h1>
+<p class="subtitle"><strong>2023-11-04</strong></p>
+
+
+
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#cb4b16;">#include </span><span style="color:#839496;">&lt;</span><span style="color:#2aa198;">iostream</span><span style="color:#839496;">&gt;
+</span><span style="color:#cb4b16;">#include </span><span style="color:#839496;">&lt;</span><span style="color:#2aa198;">vector</span><span style="color:#839496;">&gt;
+</span><span>
+</span><span style="color:#268bd2;">template </span><span>&lt;</span><span style="color:#268bd2;">typename</span><span> KeyType&gt; </span><span style="color:#268bd2;">class </span><span style="color:#b58900;">BTreeNode </span><span>{
+</span><span style="color:#859900;">public</span><span>:
+</span><span>  </span><span style="color:#268bd2;">bool</span><span> isLeaf;
+</span><span>  std::vector&lt;KeyType&gt; keys;
+</span><span>  std::vector&lt;BTreeNode </span><span style="color:#859900;">*</span><span>&gt; children;
+</span><span>
+</span><span>  </span><span style="color:#b58900;">BTreeNode</span><span>(</span><span style="color:#268bd2;">bool leaf </span><span>= </span><span style="color:#b58900;">true</span><span>) { isLeaf = leaf; }
+</span><span>};
+</span><span>
+</span><span style="color:#268bd2;">template </span><span>&lt;</span><span style="color:#268bd2;">typename</span><span> KeyType&gt; </span><span style="color:#268bd2;">class </span><span style="color:#b58900;">BTree </span><span>{
+</span><span style="color:#859900;">private</span><span>:
+</span><span>  BTreeNode&lt;KeyType&gt; </span><span style="color:#859900;">*</span><span>root;
+</span><span>  </span><span style="color:#268bd2;">int</span><span> t; </span><span style="color:#93a1a1;">// Minimum degree
+</span><span>
+</span><span style="color:#859900;">public</span><span>:
+</span><span>  </span><span style="color:#b58900;">BTree</span><span>(</span><span style="color:#268bd2;">int _t</span><span>) : </span><span style="color:#268bd2;">root</span><span>(</span><span style="color:#b58900;">nullptr</span><span>), </span><span style="color:#268bd2;">t</span><span>(_t) {}
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">void </span><span style="color:#b58900;">insert</span><span>(</span><span style="color:#859900;">const</span><span> KeyType </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">key</span><span>) {
+</span><span>    </span><span style="color:#859900;">if </span><span>(root == </span><span style="color:#b58900;">nullptr</span><span>) {
+</span><span>      root = </span><span style="color:#859900;">new </span><span style="color:#b58900;">BTreeNode</span><span>&lt;KeyType&gt;(</span><span style="color:#b58900;">true</span><span>);
+</span><span>      root-&gt;</span><span style="color:#268bd2;">keys</span><span>.</span><span style="color:#b58900;">push_back</span><span>(key);
+</span><span>    } </span><span style="color:#859900;">else </span><span>{
+</span><span>      </span><span style="color:#859900;">if </span><span>(root-&gt;</span><span style="color:#268bd2;">keys</span><span>.</span><span style="color:#b58900;">size</span><span>() == </span><span style="color:#6c71c4;">2 </span><span style="color:#859900;">*</span><span> t - </span><span style="color:#6c71c4;">1</span><span>) {
+</span><span>        BTreeNode&lt;KeyType&gt; </span><span style="color:#859900;">*</span><span>new_root = </span><span style="color:#859900;">new </span><span style="color:#b58900;">BTreeNode</span><span>&lt;KeyType&gt;(</span><span style="color:#b58900;">false</span><span>);
+</span><span>        new_root-&gt;</span><span style="color:#268bd2;">children</span><span>.</span><span style="color:#b58900;">push_back</span><span>(root);
+</span><span>        </span><span style="color:#b58900;">splitChild</span><span>(new_root, </span><span style="color:#6c71c4;">0</span><span>);
+</span><span>        root = new_root;
+</span><span>      }
+</span><span>      </span><span style="color:#b58900;">insertNonFull</span><span>(root, key);
+</span><span>    }
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">void </span><span style="color:#b58900;">search</span><span>(</span><span style="color:#859900;">const</span><span> KeyType </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">key</span><span>) { </span><span style="color:#b58900;">searchKey</span><span>(root, key); }
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">void </span><span style="color:#b58900;">print</span><span>() { </span><span style="color:#b58900;">printTree</span><span>(root, </span><span style="color:#6c71c4;">0</span><span>); }
+</span><span>
+</span><span style="color:#859900;">private</span><span>:
+</span><span>  </span><span style="color:#268bd2;">void </span><span style="color:#b58900;">insertNonFull</span><span>(BTreeNode&lt;KeyType&gt; </span><span style="color:#859900;">*</span><span style="color:#268bd2;">node</span><span>, </span><span style="color:#859900;">const</span><span> KeyType </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">key</span><span>) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> i = node-&gt;</span><span style="color:#268bd2;">keys</span><span>.</span><span style="color:#b58900;">size</span><span>() - </span><span style="color:#6c71c4;">1</span><span>;
+</span><span>    </span><span style="color:#859900;">if </span><span>(node-&gt;</span><span style="color:#268bd2;">isLeaf</span><span>) {
+</span><span>      node-&gt;</span><span style="color:#268bd2;">keys</span><span>.</span><span style="color:#b58900;">push_back</span><span>(</span><span style="color:#b58900;">KeyType</span><span>()); </span><span style="color:#93a1a1;">// Make space for a new key
+</span><span>      </span><span style="color:#859900;">while </span><span>(i &gt;= </span><span style="color:#6c71c4;">0 </span><span>&amp;&amp; key &lt; node-&gt;</span><span style="color:#268bd2;">keys[</span><span>i</span><span style="color:#268bd2;">]</span><span>) {
+</span><span>        node-&gt;</span><span style="color:#268bd2;">keys[</span><span>i + </span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">] </span><span>= node-&gt;</span><span style="color:#268bd2;">keys[</span><span>i</span><span style="color:#268bd2;">]</span><span>;
+</span><span>        i--;
+</span><span>      }
+</span><span>      node-&gt;</span><span style="color:#268bd2;">keys[</span><span>i + </span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">] </span><span>= key;
+</span><span>    } </span><span style="color:#859900;">else </span><span>{
+</span><span>      </span><span style="color:#859900;">while </span><span>(i &gt;= </span><span style="color:#6c71c4;">0 </span><span>&amp;&amp; key &lt; node-&gt;</span><span style="color:#268bd2;">keys[</span><span>i</span><span style="color:#268bd2;">]</span><span>)
+</span><span>        i--;
+</span><span>      i++;
+</span><span>
+</span><span>      </span><span style="color:#859900;">if </span><span>(node-&gt;</span><span style="color:#268bd2;">children[</span><span>i</span><span style="color:#268bd2;">]</span><span>-&gt;</span><span style="color:#268bd2;">keys</span><span>.</span><span style="color:#b58900;">size</span><span>() == </span><span style="color:#6c71c4;">2 </span><span style="color:#859900;">*</span><span> t - </span><span style="color:#6c71c4;">1</span><span>) {
+</span><span>        </span><span style="color:#b58900;">splitChild</span><span>(node, i);
+</span><span>        </span><span style="color:#859900;">if </span><span>(key &gt; node-&gt;</span><span style="color:#268bd2;">keys[</span><span>i</span><span style="color:#268bd2;">]</span><span>)
+</span><span>          i++;
+</span><span>      }
+</span><span>      </span><span style="color:#b58900;">insertNonFull</span><span>(node-&gt;</span><span style="color:#268bd2;">children[</span><span>i</span><span style="color:#268bd2;">]</span><span>, key);
+</span><span>    }
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">void </span><span style="color:#b58900;">splitChild</span><span>(BTreeNode&lt;KeyType&gt; </span><span style="color:#859900;">*</span><span style="color:#268bd2;">parent</span><span>, </span><span style="color:#268bd2;">int index</span><span>) {
+</span><span>    BTreeNode&lt;KeyType&gt; </span><span style="color:#859900;">*</span><span>child = parent-&gt;</span><span style="color:#268bd2;">children[</span><span>index</span><span style="color:#268bd2;">]</span><span>;
+</span><span>    BTreeNode&lt;KeyType&gt; </span><span style="color:#859900;">*</span><span>new_child = </span><span style="color:#859900;">new </span><span style="color:#b58900;">BTreeNode</span><span>&lt;KeyType&gt;(child-&gt;</span><span style="color:#268bd2;">isLeaf</span><span>);
+</span><span>
+</span><span>    parent-&gt;</span><span style="color:#268bd2;">keys</span><span>.</span><span style="color:#b58900;">insert</span><span>(parent-&gt;</span><span style="color:#268bd2;">keys</span><span>.</span><span style="color:#b58900;">begin</span><span>() + index, child-&gt;</span><span style="color:#268bd2;">keys[</span><span>t - </span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">]</span><span>);
+</span><span>
+</span><span>    parent-&gt;</span><span style="color:#268bd2;">children</span><span>.</span><span style="color:#b58900;">insert</span><span>(parent-&gt;</span><span style="color:#268bd2;">children</span><span>.</span><span style="color:#b58900;">begin</span><span>() + index + </span><span style="color:#6c71c4;">1</span><span>, new_child);
+</span><span>
+</span><span>    new_child-&gt;</span><span style="color:#268bd2;">keys</span><span>.</span><span style="color:#b58900;">assign</span><span>(child-&gt;</span><span style="color:#268bd2;">keys</span><span>.</span><span style="color:#b58900;">begin</span><span>() + t, child-&gt;</span><span style="color:#268bd2;">keys</span><span>.</span><span style="color:#b58900;">end</span><span>());
+</span><span>    child-&gt;</span><span style="color:#268bd2;">keys</span><span>.</span><span style="color:#b58900;">erase</span><span>(child-&gt;</span><span style="color:#268bd2;">keys</span><span>.</span><span style="color:#b58900;">begin</span><span>() + t, child-&gt;</span><span style="color:#268bd2;">keys</span><span>.</span><span style="color:#b58900;">end</span><span>());
+</span><span>
+</span><span>    </span><span style="color:#859900;">if </span><span>(!child-&gt;</span><span style="color:#268bd2;">isLeaf</span><span>) {
+</span><span>      new_child-&gt;</span><span style="color:#268bd2;">children</span><span>.</span><span style="color:#b58900;">assign</span><span>(child-&gt;</span><span style="color:#268bd2;">children</span><span>.</span><span style="color:#b58900;">begin</span><span>() + t,
+</span><span>                                 child-&gt;</span><span style="color:#268bd2;">children</span><span>.</span><span style="color:#b58900;">end</span><span>());
+</span><span>      child-&gt;</span><span style="color:#268bd2;">children</span><span>.</span><span style="color:#b58900;">erase</span><span>(child-&gt;</span><span style="color:#268bd2;">children</span><span>.</span><span style="color:#b58900;">begin</span><span>() + t, child-&gt;</span><span style="color:#268bd2;">children</span><span>.</span><span style="color:#b58900;">end</span><span>());
+</span><span>    }
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">void </span><span style="color:#b58900;">searchKey</span><span>(BTreeNode&lt;KeyType&gt; </span><span style="color:#859900;">*</span><span style="color:#268bd2;">node</span><span>, </span><span style="color:#859900;">const</span><span> KeyType </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">key</span><span>) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">0</span><span>;
+</span><span>    </span><span style="color:#859900;">while </span><span>(i &lt; node-&gt;</span><span style="color:#268bd2;">keys</span><span>.</span><span style="color:#b58900;">size</span><span>() &amp;&amp; key &gt; node-&gt;</span><span style="color:#268bd2;">keys[</span><span>i</span><span style="color:#268bd2;">]</span><span>)
+</span><span>      i++;
+</span><span>
+</span><span>    </span><span style="color:#859900;">if </span><span>(i &lt; node-&gt;</span><span style="color:#268bd2;">keys</span><span>.</span><span style="color:#b58900;">size</span><span>() &amp;&amp; key == node-&gt;</span><span style="color:#268bd2;">keys[</span><span>i</span><span style="color:#268bd2;">]</span><span>) {
+</span><span>      std::cout &lt;&lt; </span><span style="color:#839496;">&quot;</span><span style="color:#2aa198;">Key </span><span style="color:#839496;">&quot; </span><span>&lt;&lt; key &lt;&lt; </span><span style="color:#839496;">&quot;</span><span style="color:#2aa198;"> found in the tree.</span><span style="color:#839496;">&quot; </span><span>&lt;&lt; std::endl;
+</span><span>      </span><span style="color:#859900;">return</span><span>;
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#859900;">if </span><span>(node-&gt;</span><span style="color:#268bd2;">isLeaf</span><span>) {
+</span><span>      std::cout &lt;&lt; </span><span style="color:#839496;">&quot;</span><span style="color:#2aa198;">Key </span><span style="color:#839496;">&quot; </span><span>&lt;&lt; key &lt;&lt; </span><span style="color:#839496;">&quot;</span><span style="color:#2aa198;"> not found in the tree.</span><span style="color:#839496;">&quot; </span><span>&lt;&lt; std::endl;
+</span><span>      </span><span style="color:#859900;">return</span><span>;
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b58900;">searchKey</span><span>(node-&gt;</span><span style="color:#268bd2;">children[</span><span>i</span><span style="color:#268bd2;">]</span><span>, key);
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">void </span><span style="color:#b58900;">printTree</span><span>(BTreeNode&lt;KeyType&gt; </span><span style="color:#859900;">*</span><span style="color:#268bd2;">node</span><span>, </span><span style="color:#268bd2;">int depth</span><span>) {
+</span><span>    </span><span style="color:#859900;">if </span><span>(node) {
+</span><span>      </span><span style="color:#268bd2;">int</span><span> i;
+</span><span>      </span><span style="color:#859900;">for </span><span>(i = </span><span style="color:#6c71c4;">0</span><span>; i &lt; node-&gt;</span><span style="color:#268bd2;">keys</span><span>.</span><span style="color:#b58900;">size</span><span>(); i++) {
+</span><span>        </span><span style="color:#859900;">if </span><span>(!node-&gt;</span><span style="color:#268bd2;">isLeaf</span><span>)
+</span><span>          </span><span style="color:#b58900;">printTree</span><span>(node-&gt;</span><span style="color:#268bd2;">children[</span><span>i</span><span style="color:#268bd2;">]</span><span>, depth + </span><span style="color:#6c71c4;">1</span><span>);
+</span><span>        </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> j = </span><span style="color:#6c71c4;">0</span><span>; j &lt; depth; j++)
+</span><span>          std::cout &lt;&lt; </span><span style="color:#839496;">&quot;  &quot;</span><span>;
+</span><span>        std::cout &lt;&lt; node-&gt;</span><span style="color:#268bd2;">keys[</span><span>i</span><span style="color:#268bd2;">] </span><span>&lt;&lt; std::endl;
+</span><span>      }
+</span><span>
+</span><span>      </span><span style="color:#859900;">if </span><span>(!node-&gt;</span><span style="color:#268bd2;">isLeaf</span><span>)
+</span><span>        </span><span style="color:#b58900;">printTree</span><span>(node-&gt;</span><span style="color:#268bd2;">children[</span><span>i</span><span style="color:#268bd2;">]</span><span>, depth + </span><span style="color:#6c71c4;">1</span><span>);
+</span><span>    }
+</span><span>  }
+</span><span>};
+</span></code></pre>
+
+
+
+  </main>
+</body>
+</html>

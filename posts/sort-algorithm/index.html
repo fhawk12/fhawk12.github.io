@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>fhawk12&#x27;s blog</title>
+</head>
+<body>
+  <header class="nav-bar">
+    
+<nav>
+  <ul>
+    
+    <li><a href="&#x2F;posts">posts</a></li>
+    
+    <li><a href="&#x2F;tags">tags</a></li>
+    
+    <li><a href="&#x2F;archive">archive</a></li>
+    
+  </ul>
+</nav>
+
+
+  </header>
+  <main class="content">
+    
+
+<h1 class="title">
+  Sort Algorithm
+</h1>
+<p class="subtitle"><strong>2023-11-04</strong></p>
+
+
+<h2>Table of contents</h2>
+<ul>
+
+  <li>
+  <a href="https://fhawk12.github.io/posts/sort-algorithm/#bubble-sort">Bubble Sort</a>
+  
+  </li>
+
+  <li>
+  <a href="https://fhawk12.github.io/posts/sort-algorithm/#insertion-sort">Insertion Sort</a>
+  
+  </li>
+
+  <li>
+  <a href="https://fhawk12.github.io/posts/sort-algorithm/#shell-sort">Shell Sort</a>
+  
+  </li>
+
+  <li>
+  <a href="https://fhawk12.github.io/posts/sort-algorithm/#selection-sort">Selection Sort</a>
+  
+  </li>
+
+  <li>
+  <a href="https://fhawk12.github.io/posts/sort-algorithm/#quick-sort">Quick Sort</a>
+  
+  </li>
+
+  <li>
+  <a href="https://fhawk12.github.io/posts/sort-algorithm/#merge-sort">Merge Sort</a>
+  
+  </li>
+
+  <li>
+  <a href="https://fhawk12.github.io/posts/sort-algorithm/#radix-sort">Radix Sort</a>
+  
+  </li>
+
+</ul>
+
+
+<h2 id="bubble-sort">Bubble Sort</h2>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#268bd2;">void </span><span style="color:#b58900;">bubbleSort</span><span>() {
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">0</span><span>; i &lt; arr.</span><span style="color:#b58900;">size</span><span>(); i++) {
+</span><span>    </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> j = i + </span><span style="color:#6c71c4;">1</span><span>; j &lt; arr.</span><span style="color:#b58900;">size</span><span>(); j++) {
+</span><span>      </span><span style="color:#859900;">if </span><span>(arr</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">] </span><span>&gt; arr</span><span style="color:#268bd2;">[</span><span>j</span><span style="color:#268bd2;">]</span><span>)
+</span><span>        </span><span style="color:#b58900;">swap</span><span>(arr</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">]</span><span>, arr</span><span style="color:#268bd2;">[</span><span>j</span><span style="color:#268bd2;">]</span><span>);
+</span><span>    }
+</span><span>  }
+</span><span>}
+</span><span>
+</span><span style="color:#268bd2;">void </span><span style="color:#b58900;">swap</span><span>(</span><span style="color:#268bd2;">int </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">a</span><span>, </span><span style="color:#268bd2;">int </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">b</span><span>) {
+</span><span>  </span><span style="color:#268bd2;">int</span><span> t = a;
+</span><span>  a = b;
+</span><span>  b = t;
+</span><span>}
+</span></code></pre>
+<h2 id="insertion-sort">Insertion Sort</h2>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#268bd2;">void </span><span style="color:#b58900;">insertionSort</span><span>() {
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">1</span><span>; i &lt; arr.</span><span style="color:#b58900;">size</span><span>(); i++) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> key = arr</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">]</span><span>;
+</span><span>    </span><span style="color:#268bd2;">int</span><span> j = i - </span><span style="color:#6c71c4;">1</span><span>;
+</span><span>    </span><span style="color:#859900;">while </span><span>(j &gt;= </span><span style="color:#6c71c4;">0 </span><span>&amp;&amp; arr</span><span style="color:#268bd2;">[</span><span>j</span><span style="color:#268bd2;">] </span><span>&gt; key) {
+</span><span>      arr</span><span style="color:#268bd2;">[</span><span>j + </span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">] </span><span>= arr</span><span style="color:#268bd2;">[</span><span>j</span><span style="color:#268bd2;">]</span><span>;
+</span><span>      j--;
+</span><span>    }
+</span><span>    arr</span><span style="color:#268bd2;">[</span><span>j + </span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">] </span><span>= key;
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<h2 id="shell-sort">Shell Sort</h2>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#268bd2;">void </span><span style="color:#b58900;">shellSort</span><span>() {
+</span><span>  </span><span style="color:#268bd2;">int</span><span> n = arr.</span><span style="color:#b58900;">size</span><span>();
+</span><span>  </span><span style="color:#93a1a1;">// Start with a large gap and reduce it over each iteration
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> gap = n / </span><span style="color:#6c71c4;">2</span><span>; gap &gt; </span><span style="color:#6c71c4;">0</span><span>; gap /= </span><span style="color:#6c71c4;">2</span><span>) {
+</span><span>    </span><span style="color:#93a1a1;">// Perform an insertion sort for elements at a given gap
+</span><span>    </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = gap; i &lt; n; i++) {
+</span><span>      </span><span style="color:#268bd2;">int</span><span> temp = arr</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">]</span><span>;
+</span><span>      </span><span style="color:#268bd2;">int</span><span> j;
+</span><span>      </span><span style="color:#859900;">for </span><span>(j = i; j &gt;= gap &amp;&amp; arr</span><span style="color:#268bd2;">[</span><span>j - gap</span><span style="color:#268bd2;">] </span><span>&gt; temp; j -= gap) {
+</span><span>        arr</span><span style="color:#268bd2;">[</span><span>j</span><span style="color:#268bd2;">] </span><span>= arr</span><span style="color:#268bd2;">[</span><span>j - gap</span><span style="color:#268bd2;">]</span><span>;
+</span><span>      }
+</span><span>      arr</span><span style="color:#268bd2;">[</span><span>j</span><span style="color:#268bd2;">] </span><span>= temp;
+</span><span>    }
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<h2 id="selection-sort">Selection Sort</h2>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#268bd2;">void </span><span style="color:#b58900;">selectionSort</span><span>() {
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">0</span><span>; i &lt; arr.</span><span style="color:#b58900;">size</span><span>() - </span><span style="color:#6c71c4;">1</span><span>; i++) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> min_index = i;
+</span><span>    </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> j = i + </span><span style="color:#6c71c4;">1</span><span>; j &lt; arr.</span><span style="color:#b58900;">size</span><span>(); j++) {
+</span><span>      </span><span style="color:#859900;">if </span><span>(arr</span><span style="color:#268bd2;">[</span><span>j</span><span style="color:#268bd2;">] </span><span>&lt; arr</span><span style="color:#268bd2;">[</span><span>min_index</span><span style="color:#268bd2;">]</span><span>) {
+</span><span>        min_index = j;
+</span><span>      }
+</span><span>    }
+</span><span>    </span><span style="color:#859900;">if </span><span>(min_index != i) {
+</span><span>      </span><span style="color:#b58900;">swap</span><span>(arr</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">]</span><span>, arr</span><span style="color:#268bd2;">[</span><span>min_index</span><span style="color:#268bd2;">]</span><span>);
+</span><span>    }
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<h2 id="quick-sort">Quick Sort</h2>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#268bd2;">int </span><span style="color:#b58900;">partition</span><span>(vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">arr</span><span>, </span><span style="color:#268bd2;">int l</span><span>, </span><span style="color:#268bd2;">int r</span><span>) {
+</span><span>  </span><span style="color:#268bd2;">int</span><span> mid = arr</span><span style="color:#268bd2;">[</span><span>l</span><span style="color:#268bd2;">]</span><span>;
+</span><span>  </span><span style="color:#859900;">while </span><span>(l &lt; r) {
+</span><span>    </span><span style="color:#859900;">while </span><span>(l &lt; r &amp;&amp; arr</span><span style="color:#268bd2;">[</span><span>r</span><span style="color:#268bd2;">] </span><span>&gt;= mid) r--;
+</span><span>    arr</span><span style="color:#268bd2;">[</span><span>l</span><span style="color:#268bd2;">] </span><span>= arr</span><span style="color:#268bd2;">[</span><span>r</span><span style="color:#268bd2;">]</span><span>;
+</span><span>    </span><span style="color:#859900;">while </span><span>(l &lt; r &amp;&amp; arr</span><span style="color:#268bd2;">[</span><span>l</span><span style="color:#268bd2;">] </span><span>&lt;= mid) l++;
+</span><span>    arr</span><span style="color:#268bd2;">[</span><span>r</span><span style="color:#268bd2;">] </span><span>= arr</span><span style="color:#268bd2;">[</span><span>l</span><span style="color:#268bd2;">]</span><span>;
+</span><span>  }
+</span><span>  arr</span><span style="color:#268bd2;">[</span><span>l</span><span style="color:#268bd2;">] </span><span>= mid;
+</span><span>  </span><span style="color:#859900;">return</span><span> l;
+</span><span>}
+</span><span>
+</span><span style="color:#268bd2;">void </span><span style="color:#b58900;">quickSort</span><span>(vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">arr</span><span>, </span><span style="color:#268bd2;">int l</span><span>, </span><span style="color:#268bd2;">int r</span><span>) {
+</span><span>  </span><span style="color:#859900;">if </span><span>(l &lt; r) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> pivot = </span><span style="color:#b58900;">partition</span><span>(arr, l, r);
+</span><span>    </span><span style="color:#b58900;">quickSort</span><span>(arr, l, pivot - </span><span style="color:#6c71c4;">1</span><span>);
+</span><span>    </span><span style="color:#b58900;">quickSort</span><span>(arr, pivot + </span><span style="color:#6c71c4;">1</span><span>, r);
+</span><span>  }
+</span><span>}
+</span><span>
+</span><span style="color:#268bd2;">void </span><span style="color:#b58900;">quickSort</span><span>(vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">arr</span><span>) {
+</span><span>  </span><span style="color:#268bd2;">int</span><span> n = arr.</span><span style="color:#b58900;">size</span><span>();
+</span><span>  </span><span style="color:#b58900;">quickSort</span><span>(arr, </span><span style="color:#6c71c4;">0</span><span>, n - </span><span style="color:#6c71c4;">1</span><span>);
+</span><span>}
+</span></code></pre>
+<h2 id="merge-sort">Merge Sort</h2>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#268bd2;">void </span><span style="color:#b58900;">merge</span><span>(vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">arr</span><span>, </span><span style="color:#268bd2;">int left</span><span>, </span><span style="color:#268bd2;">int middle</span><span>, </span><span style="color:#268bd2;">int right</span><span>) {
+</span><span>  </span><span style="color:#268bd2;">int</span><span> n1 = middle - left + </span><span style="color:#6c71c4;">1</span><span>;
+</span><span>  </span><span style="color:#268bd2;">int</span><span> n2 = right - middle;
+</span><span>
+</span><span>  vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#b58900;">leftArr</span><span>(n1);
+</span><span>  vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#b58900;">rightArr</span><span>(n2);
+</span><span>
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">0</span><span>; i &lt; n1; i++) {
+</span><span>    leftArr</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">] </span><span>= arr</span><span style="color:#268bd2;">[</span><span>left + i</span><span style="color:#268bd2;">]</span><span>;
+</span><span>  }
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">0</span><span>; i &lt; n2; i++) {
+</span><span>    rightArr</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">] </span><span>= arr</span><span style="color:#268bd2;">[</span><span>middle + </span><span style="color:#6c71c4;">1 </span><span>+ i</span><span style="color:#268bd2;">]</span><span>;
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">0</span><span>;
+</span><span>  </span><span style="color:#268bd2;">int</span><span> j = </span><span style="color:#6c71c4;">0</span><span>;
+</span><span>  </span><span style="color:#268bd2;">int</span><span> k = left;
+</span><span>
+</span><span>  </span><span style="color:#859900;">while </span><span>(i &lt; n1 &amp;&amp; j &lt; n2) {
+</span><span>    </span><span style="color:#859900;">if </span><span>(leftArr</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">] </span><span>&lt;= rightArr</span><span style="color:#268bd2;">[</span><span>j</span><span style="color:#268bd2;">]</span><span>) {
+</span><span>      arr</span><span style="color:#268bd2;">[</span><span>k</span><span style="color:#268bd2;">] </span><span>= leftArr</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">]</span><span>;
+</span><span>      i++;
+</span><span>    } </span><span style="color:#859900;">else </span><span>{
+</span><span>      arr</span><span style="color:#268bd2;">[</span><span>k</span><span style="color:#268bd2;">] </span><span>= rightArr</span><span style="color:#268bd2;">[</span><span>j</span><span style="color:#268bd2;">]</span><span>;
+</span><span>      j++;
+</span><span>    }
+</span><span>    k++;
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#859900;">while </span><span>(i &lt; n1) {
+</span><span>    arr</span><span style="color:#268bd2;">[</span><span>k</span><span style="color:#268bd2;">] </span><span>= leftArr</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">]</span><span>;
+</span><span>    i++;
+</span><span>    k++;
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#859900;">while </span><span>(j &lt; n2) {
+</span><span>    arr</span><span style="color:#268bd2;">[</span><span>k</span><span style="color:#268bd2;">] </span><span>= rightArr</span><span style="color:#268bd2;">[</span><span>j</span><span style="color:#268bd2;">]</span><span>;
+</span><span>    j++;
+</span><span>    k++;
+</span><span>  }
+</span><span>}
+</span><span>
+</span><span style="color:#268bd2;">void </span><span style="color:#b58900;">mergeSort</span><span>(vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">arr</span><span>, </span><span style="color:#268bd2;">int left</span><span>, </span><span style="color:#268bd2;">int right</span><span>) {
+</span><span>  </span><span style="color:#859900;">if </span><span>(left &lt; right) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> middle = left + (right - left) / </span><span style="color:#6c71c4;">2</span><span>;
+</span><span>
+</span><span>    </span><span style="color:#b58900;">mergeSort</span><span>(arr, left, middle);
+</span><span>    </span><span style="color:#b58900;">mergeSort</span><span>(arr, middle + </span><span style="color:#6c71c4;">1</span><span>, right);
+</span><span>
+</span><span>    </span><span style="color:#b58900;">merge</span><span>(arr, left, middle, right);
+</span><span>  }
+</span><span>}
+</span><span>
+</span><span style="color:#268bd2;">void </span><span style="color:#b58900;">mergeSort</span><span>(vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">arr</span><span>) {
+</span><span>  </span><span style="color:#268bd2;">int</span><span> n = arr.</span><span style="color:#b58900;">size</span><span>();
+</span><span>  </span><span style="color:#b58900;">mergeSort</span><span>(arr, </span><span style="color:#6c71c4;">0</span><span>, n - </span><span style="color:#6c71c4;">1</span><span>);
+</span><span>}
+</span></code></pre>
+<h2 id="radix-sort">Radix Sort</h2>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#268bd2;">int </span><span style="color:#b58900;">getMaxValue</span><span>(</span><span style="color:#859900;">const</span><span> vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">arr</span><span>) {
+</span><span>  </span><span style="color:#859900;">return *</span><span style="color:#b58900;">max_element</span><span>(arr.</span><span style="color:#b58900;">begin</span><span>(), arr.</span><span style="color:#b58900;">end</span><span>());
+</span><span>}
+</span><span>
+</span><span style="color:#268bd2;">void </span><span style="color:#b58900;">countSort</span><span>(vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">arr</span><span>, </span><span style="color:#268bd2;">int exp</span><span>) {
+</span><span>  </span><span style="color:#268bd2;">int</span><span> n = arr.</span><span style="color:#b58900;">size</span><span>();
+</span><span>  vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#b58900;">output</span><span>(n);
+</span><span>  vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#b58900;">count</span><span>(</span><span style="color:#6c71c4;">10</span><span>, </span><span style="color:#6c71c4;">0</span><span>);
+</span><span>
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">0</span><span>; i &lt; n; i++) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> digit = (arr</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">] </span><span>/ exp) % </span><span style="color:#6c71c4;">10</span><span>;
+</span><span>    count</span><span style="color:#268bd2;">[</span><span>digit</span><span style="color:#268bd2;">]</span><span>++;
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">1</span><span>; i &lt; </span><span style="color:#6c71c4;">10</span><span>; i++) {
+</span><span>    count</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">] </span><span>+= count</span><span style="color:#268bd2;">[</span><span>i - </span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">]</span><span>;
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = n - </span><span style="color:#6c71c4;">1</span><span>; i &gt;= </span><span style="color:#6c71c4;">0</span><span>; i--) {
+</span><span>    </span><span style="color:#268bd2;">int</span><span> digit = (arr</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">] </span><span>/ exp) % </span><span style="color:#6c71c4;">10</span><span>;
+</span><span>    output</span><span style="color:#268bd2;">[</span><span>count</span><span style="color:#268bd2;">[</span><span>digit</span><span style="color:#268bd2;">] </span><span>- </span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">] </span><span>= arr</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">]</span><span>;
+</span><span>    count</span><span style="color:#268bd2;">[</span><span>digit</span><span style="color:#268bd2;">]</span><span>--;
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#b58900;">copy</span><span>(output.</span><span style="color:#b58900;">begin</span><span>(), output.</span><span style="color:#b58900;">end</span><span>(), arr.</span><span style="color:#b58900;">begin</span><span>());
+</span><span>}
+</span><span>
+</span><span style="color:#268bd2;">void </span><span style="color:#b58900;">radixSort</span><span>(vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">arr</span><span>) {
+</span><span>  </span><span style="color:#268bd2;">int</span><span> maxVal = </span><span style="color:#b58900;">getMaxValue</span><span>(arr);
+</span><span>
+</span><span>  </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> exp = </span><span style="color:#6c71c4;">1</span><span>; maxVal / exp &gt; </span><span style="color:#6c71c4;">0</span><span>; exp *= </span><span style="color:#6c71c4;">10</span><span>) {
+</span><span>    </span><span style="color:#b58900;">countSort</span><span>(arr, exp);
+</span><span>  }
+</span><span>}
+</span></code></pre>
+
+
+
+  </main>
+</body>
+</html>

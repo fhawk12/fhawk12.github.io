@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>fhawk12&#x27;s blog</title>
+</head>
+<body>
+  <header class="nav-bar">
+    
+<nav>
+  <ul>
+    
+    <li><a href="&#x2F;posts">posts</a></li>
+    
+    <li><a href="&#x2F;tags">tags</a></li>
+    
+    <li><a href="&#x2F;archive">archive</a></li>
+    
+  </ul>
+</nav>
+
+
+  </header>
+  <main class="content">
+    
+
+<h1 class="title">
+  Pascal&#x27;s Triangle
+</h1>
+<p class="subtitle"><strong>2023-09-22</strong></p>
+
+
+
+<p>In mathematics, Pascal's triangle is a triangular array of the binomial coefficients arising in probability theory, combinatorics, and algebra.</p>
+<pre data-lang="cpp" style="background-color:#fdf6e3;color:#657b83;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#cb4b16;">#include </span><span style="color:#839496;">&lt;</span><span style="color:#2aa198;">iostream</span><span style="color:#839496;">&gt;
+</span><span style="color:#cb4b16;">#include </span><span style="color:#839496;">&lt;</span><span style="color:#2aa198;">vector</span><span style="color:#839496;">&gt;
+</span><span>
+</span><span style="color:#859900;">using namespace</span><span> std;
+</span><span>
+</span><span style="color:#268bd2;">class </span><span style="color:#b58900;">PascalTriangle </span><span>{
+</span><span style="color:#859900;">private</span><span>:
+</span><span>  </span><span style="color:#268bd2;">int</span><span> numRows;
+</span><span>  vector&lt;vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt;&gt; triangle;
+</span><span>
+</span><span style="color:#859900;">public</span><span>:
+</span><span>  </span><span style="color:#b58900;">PascalTriangle</span><span>(</span><span style="color:#268bd2;">int numRows</span><span>) {
+</span><span>    </span><span style="color:#d33682;">this</span><span>-&gt;</span><span style="color:#268bd2;">numRows </span><span>= numRows;
+</span><span>    </span><span style="color:#d33682;">this</span><span>-&gt;</span><span style="color:#268bd2;">triangle </span><span>= </span><span style="color:#b58900;">vector</span><span>&lt;vector&lt;</span><span style="color:#268bd2;">int</span><span>&gt;&gt;(numRows);
+</span><span>    </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">0</span><span>; i &lt; numRows; i++) {
+</span><span>      triangle</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">]</span><span>.</span><span style="color:#b58900;">resize</span><span>(i + </span><span style="color:#6c71c4;">1</span><span>);
+</span><span>      triangle</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">][</span><span style="color:#6c71c4;">0</span><span style="color:#268bd2;">] </span><span>= </span><span style="color:#6c71c4;">1</span><span>;
+</span><span>      triangle</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">][</span><span>i</span><span style="color:#268bd2;">] </span><span>= </span><span style="color:#6c71c4;">1</span><span>;
+</span><span>
+</span><span>      </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> j = </span><span style="color:#6c71c4;">1</span><span>; j &lt; i; j++) {
+</span><span>        triangle</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">][</span><span>j</span><span style="color:#268bd2;">] </span><span>= triangle</span><span style="color:#268bd2;">[</span><span>i - </span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">][</span><span>j - </span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">] </span><span>+ triangle</span><span style="color:#268bd2;">[</span><span>i - </span><span style="color:#6c71c4;">1</span><span style="color:#268bd2;">][</span><span>j</span><span style="color:#268bd2;">]</span><span>;
+</span><span>      }
+</span><span>    }
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">void </span><span style="color:#b58900;">print</span><span>() {
+</span><span>    </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> i = </span><span style="color:#6c71c4;">0</span><span>; i &lt; </span><span style="color:#d33682;">this</span><span>-&gt;</span><span style="color:#268bd2;">numRows</span><span>; i++) {
+</span><span>      </span><span style="color:#859900;">for </span><span>(</span><span style="color:#268bd2;">int</span><span> j = </span><span style="color:#6c71c4;">0</span><span>; j &lt;= i; j++) {
+</span><span>        cout &lt;&lt; triangle</span><span style="color:#268bd2;">[</span><span>i</span><span style="color:#268bd2;">][</span><span>j</span><span style="color:#268bd2;">] </span><span>&lt;&lt; </span><span style="color:#839496;">&quot; &quot;</span><span>;
+</span><span>      }
+</span><span>      cout &lt;&lt; endl;
+</span><span>    }
+</span><span>  }
+</span><span>
+</span><span>  </span><span style="color:#268bd2;">int </span><span style="color:#b58900;">get</span><span>(</span><span style="color:#268bd2;">int row</span><span>, </span><span style="color:#268bd2;">int col</span><span>) {
+</span><span>    </span><span style="color:#859900;">if </span><span>(row &lt; </span><span style="color:#6c71c4;">0 </span><span>|| col &lt; </span><span style="color:#6c71c4;">0 </span><span>|| col &gt; row) {
+</span><span>      </span><span style="color:#859900;">return </span><span>-</span><span style="color:#6c71c4;">1</span><span>;
+</span><span>    }
+</span><span>    </span><span style="color:#859900;">return</span><span> triangle</span><span style="color:#268bd2;">[</span><span>row</span><span style="color:#268bd2;">][</span><span>col</span><span style="color:#268bd2;">]</span><span>;
+</span><span>  }
+</span><span>};
+</span></code></pre>
+
+
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>fhawk12&#x27;s blog - template</title>
+    <link rel="self" type="application/atom+xml" href="https://fhawk12.github.io/tags/template/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://fhawk12.github.io/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-11-04T00:00:00+00:00</updated>
+    <id>https://fhawk12.github.io/tags/template/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Sort Algorithm</title>
+        <published>2023-11-04T00:00:00+00:00</published>
+        <updated>2023-11-04T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              fhawk12
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://fhawk12.github.io/posts/sort-algorithm/"/>
+        <id>https://fhawk12.github.io/posts/sort-algorithm/</id>
+        
+        <content type="html" xml:base="https://fhawk12.github.io/posts/sort-algorithm/">&lt;h2 id=&quot;bubble-sort&quot;&gt;Bubble Sort&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;bubbleSort&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;lt; arr.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;(); i++) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; j = i + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;; j &amp;lt; arr.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;(); j++) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;swap&lt;&#x2F;span&gt;&lt;span&gt;(arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;, arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;swap&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; t = a;
+&lt;&#x2F;span&gt;&lt;span&gt;  a = b;
+&lt;&#x2F;span&gt;&lt;span&gt;  b = t;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;insertion-sort&quot;&gt;Insertion Sort&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;insertionSort&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;lt; arr.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;(); i++) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; key = arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; j = i - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(j &amp;gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0 &lt;&#x2F;span&gt;&lt;span&gt;&amp;amp;&amp;amp; arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; key) {
+&lt;&#x2F;span&gt;&lt;span&gt;      arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;j + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      j--;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;j + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= key;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;shell-sort&quot;&gt;Shell Sort&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;shellSort&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; n = arr.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; Start with a large gap and reduce it over each iteration
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; gap = n &#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;; gap &amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; gap &#x2F;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; Perform an insertion sort for elements at a given gap
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = gap; i &amp;lt; n; i++) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; temp = arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; j;
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(j = i; j &amp;gt;= gap &amp;amp;&amp;amp; arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;j - gap&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; temp; j -= gap) {
+&lt;&#x2F;span&gt;&lt;span&gt;        arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;j - gap&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;      arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= temp;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;selection-sort&quot;&gt;Selection Sort&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;selectionSort&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;lt; arr.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;() - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;; i++) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; min_index = i;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; j = i + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;; j &amp;lt; arr.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;(); j++) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt; arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;min_index&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;        min_index = j;
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(min_index != i) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;swap&lt;&#x2F;span&gt;&lt;span&gt;(arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;, arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;min_index&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;quick-sort&quot;&gt;Quick Sort&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;partition&lt;&#x2F;span&gt;&lt;span&gt;(vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;arr&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int l&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int r&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; mid = arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;l&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(l &amp;lt; r) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(l &amp;lt; r &amp;amp;&amp;amp; arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;r&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;= mid) r--;
+&lt;&#x2F;span&gt;&lt;span&gt;    arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;l&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;r&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(l &amp;lt; r &amp;amp;&amp;amp; arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;l&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;= mid) l++;
+&lt;&#x2F;span&gt;&lt;span&gt;    arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;r&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;l&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;  arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;l&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= mid;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; l;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;quickSort&lt;&#x2F;span&gt;&lt;span&gt;(vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;arr&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int l&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int r&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(l &amp;lt; r) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; pivot = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;partition&lt;&#x2F;span&gt;&lt;span&gt;(arr, l, r);
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;quickSort&lt;&#x2F;span&gt;&lt;span&gt;(arr, l, pivot - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;quickSort&lt;&#x2F;span&gt;&lt;span&gt;(arr, pivot + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, r);
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;quickSort&lt;&#x2F;span&gt;&lt;span&gt;(vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;arr&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; n = arr.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;quickSort&lt;&#x2F;span&gt;&lt;span&gt;(arr, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;, n - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;merge-sort&quot;&gt;Merge Sort&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;merge&lt;&#x2F;span&gt;&lt;span&gt;(vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;arr&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int left&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int middle&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int right&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; n1 = middle - left + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; n2 = right - middle;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;leftArr&lt;&#x2F;span&gt;&lt;span&gt;(n1);
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;rightArr&lt;&#x2F;span&gt;&lt;span&gt;(n2);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;lt; n1; i++) {
+&lt;&#x2F;span&gt;&lt;span&gt;    leftArr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;left + i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;lt; n2; i++) {
+&lt;&#x2F;span&gt;&lt;span&gt;    rightArr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;middle + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;+ i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; j = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; k = left;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(i &amp;lt; n1 &amp;amp;&amp;amp; j &amp;lt; n2) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(leftArr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;= rightArr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;      arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;k&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= leftArr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      i++;
+&lt;&#x2F;span&gt;&lt;span&gt;    } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;else &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;      arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;k&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= rightArr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      j++;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    k++;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(i &amp;lt; n1) {
+&lt;&#x2F;span&gt;&lt;span&gt;    arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;k&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= leftArr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    i++;
+&lt;&#x2F;span&gt;&lt;span&gt;    k++;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(j &amp;lt; n2) {
+&lt;&#x2F;span&gt;&lt;span&gt;    arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;k&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= rightArr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    j++;
+&lt;&#x2F;span&gt;&lt;span&gt;    k++;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;mergeSort&lt;&#x2F;span&gt;&lt;span&gt;(vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;arr&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int left&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int right&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(left &amp;lt; right) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; middle = left + (right - left) &#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;mergeSort&lt;&#x2F;span&gt;&lt;span&gt;(arr, left, middle);
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;mergeSort&lt;&#x2F;span&gt;&lt;span&gt;(arr, middle + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, right);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;merge&lt;&#x2F;span&gt;&lt;span&gt;(arr, left, middle, right);
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;mergeSort&lt;&#x2F;span&gt;&lt;span&gt;(vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;arr&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; n = arr.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;mergeSort&lt;&#x2F;span&gt;&lt;span&gt;(arr, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;, n - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;radix-sort&quot;&gt;Radix Sort&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;getMaxValue&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;const&lt;&#x2F;span&gt;&lt;span&gt; vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;arr&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return *&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;max_element&lt;&#x2F;span&gt;&lt;span&gt;(arr.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;begin&lt;&#x2F;span&gt;&lt;span&gt;(), arr.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;end&lt;&#x2F;span&gt;&lt;span&gt;());
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;countSort&lt;&#x2F;span&gt;&lt;span&gt;(vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;arr&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int exp&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; n = arr.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;output&lt;&#x2F;span&gt;&lt;span&gt;(n);
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;count&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;lt; n; i++) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; digit = (arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;&#x2F; exp) % &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    count&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;digit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;++;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;lt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span&gt;; i++) {
+&lt;&#x2F;span&gt;&lt;span&gt;    count&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;+= count&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = n - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; i--) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; digit = (arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;&#x2F; exp) % &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    output&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;count&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;digit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= arr&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    count&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;digit&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;--;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;copy&lt;&#x2F;span&gt;&lt;span&gt;(output.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;begin&lt;&#x2F;span&gt;&lt;span&gt;(), output.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;end&lt;&#x2F;span&gt;&lt;span&gt;(), arr.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;begin&lt;&#x2F;span&gt;&lt;span&gt;());
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;radixSort&lt;&#x2F;span&gt;&lt;span&gt;(vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;arr&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; maxVal = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;getMaxValue&lt;&#x2F;span&gt;&lt;span&gt;(arr);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; exp = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;; maxVal &#x2F; exp &amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; exp *= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;countSort&lt;&#x2F;span&gt;&lt;span&gt;(arr, exp);
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Algorithm Template</title>
+        <published>2021-09-23T00:00:00+00:00</published>
+        <updated>2021-09-23T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              fhawk12
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://fhawk12.github.io/posts/algorithm-template/"/>
+        <id>https://fhawk12.github.io/posts/algorithm-template/</id>
+        
+        <content type="html" xml:base="https://fhawk12.github.io/posts/algorithm-template/">&lt;h2 id=&quot;array&quot;&gt;Array&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;divide-loop&quot;&gt;Divide Loop&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;find-if-array-can-be-sorted&quot;&gt;LC 3011. Find if Array Can Be Sorted&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;longest-substring-of-all-vowels-in-order&#x2F;&quot;&gt;LC 1839. Longest Substring Of All Vowels in Order&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;lt; nums.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;();) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; start = i;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(i &amp;lt; nums.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;() &amp;amp;&amp;amp; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    i++;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; from start to i-1 is a group
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; the next group start with i, without the need for i++
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;binary-search&quot;&gt;Binary Search&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;house-robber-iv&#x2F;&quot;&gt;LC 2560. House Robber IV&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;number-of-flowers-in-full-bloom&#x2F;&quot;&gt;LC 2251. Number of Flowers in Full Bloom&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;find-in-mountain-array&#x2F;&quot;&gt;LC 1095. Find in Mountain Array&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;maximum-number-of-alloys&#x2F;&quot;&gt;LC 2861. Maximum Number of Alloys&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#859900;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(left &amp;lt; right) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; mid = left + (right - left) &#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(condition) {
+&lt;&#x2F;span&gt;&lt;span&gt;    left = mid + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;else &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    right = mid;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;lower-bound&quot;&gt;Lower Bound&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;find-first-and-last-position-of-element-in-sorted-array&#x2F;&quot;&gt;LC 34. Find First and Last Position of Element in Sorted Array&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F;     ↓
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; LLLLEEEEGGGGGG
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; return the first no less than target element
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;lowerBound&lt;&#x2F;span&gt;&lt;span&gt;(vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;nums&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int target&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; l = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; r = nums.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(l &amp;lt; r) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; mid = l + (r - l) &#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(nums&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;mid&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt; target) {
+&lt;&#x2F;span&gt;&lt;span&gt;      l = mid + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;else &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;      r = mid;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; l;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;upper-bound&quot;&gt;Upper Bound&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;find-first-and-last-position-of-element-in-sorted-array&#x2F;&quot;&gt;LC 34. Find First and Last Position of Element in Sorted Array&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;number-of-flowers-in-full-bloom&#x2F;&quot;&gt;LC 2251. Number of Flowers in Full Bloom&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F;         ↓
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; LLLLEEEEGGGGGG
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; return the first greater than target element
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;upperBound&lt;&#x2F;span&gt;&lt;span&gt;(vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;nums&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int target&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; l = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; r = nums.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(l &amp;lt; r) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; mid = l + (r - l) &#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(nums&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;mid&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; target) {
+&lt;&#x2F;span&gt;&lt;span&gt;      r = mid;
+&lt;&#x2F;span&gt;&lt;span&gt;    } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;else &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;      l = mid + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; l;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;bits&quot;&gt;Bits&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;gosper-s-hack&quot;&gt;Gosper&#x27;s Hack&lt;&#x2F;h3&gt;
+&lt;p&gt;all n-bit values that have k bits set to 1&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;maximum-rows-covered-by-columns&#x2F;&quot;&gt;LC 2397. Maximum Rows Covered by Columns&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;GospersHack&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int n&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int k&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; x = (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; k) - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; limit = (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; n);
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(x &amp;lt; limit) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;* check if have k bits set to 1 *&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;* do something *&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; lowbit = x &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp; &lt;&#x2F;span&gt;&lt;span&gt;-x;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; left = x + lowbit;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; right = ((left ^ x) &amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;) &#x2F; lowbit;
+&lt;&#x2F;span&gt;&lt;span&gt;    x = left | right;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;diff-array&quot;&gt;Diff Array&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;number-of-flowers-in-full-bloom&#x2F;&quot;&gt;LC 2251. Number of Flowers in Full Bloom&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span&gt;vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;diffArray&lt;&#x2F;span&gt;&lt;span&gt;(vector&amp;lt;vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;nums&lt;&#x2F;span&gt;&lt;span&gt;, vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;query&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  map&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; diff;
+&lt;&#x2F;span&gt;&lt;span&gt;  diff&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;auto &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span&gt;e &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; nums) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; start = e&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;, end = e&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    diff&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;start&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;++;
+&lt;&#x2F;span&gt;&lt;span&gt;    diff&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;end&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;--;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; pos;
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; prefix;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; curr = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;auto&lt;&#x2F;span&gt;&lt;span&gt; pair &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; diff) {
+&lt;&#x2F;span&gt;&lt;span&gt;    pos.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;push_back&lt;&#x2F;span&gt;&lt;span&gt;(pair.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;first&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;    curr += pair.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;second&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    prefix.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;push_back&lt;&#x2F;span&gt;&lt;span&gt;(curr);
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; ans;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; q &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; query) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;upper_bound&lt;&#x2F;span&gt;&lt;span&gt;(pos.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;begin&lt;&#x2F;span&gt;&lt;span&gt;(), pos.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;end&lt;&#x2F;span&gt;&lt;span&gt;(), q) - pos.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;begin&lt;&#x2F;span&gt;&lt;span&gt;() - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    ans.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;push_back&lt;&#x2F;span&gt;&lt;span&gt;(prefix&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; ans;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;dp-dynamic-programming&quot;&gt;DP (Dynamic Programming)&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;knapsack&quot;&gt;knapsack&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;0-1-knapsack&quot;&gt;0-1 knapsack&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;partition-equal-subset-sum&#x2F;description&#x2F;&quot;&gt;LC 416. Partition Equal Subset Sum&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;painting-the-walls&#x2F;description&quot;&gt;LC 2742. Painting the Walls&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;target-sum&#x2F;description&quot;&gt;LC 494. Target Sum&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;knapsack&lt;&#x2F;span&gt;&lt;span&gt;(vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;weight&lt;&#x2F;span&gt;&lt;span&gt;, vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;value&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int capacity&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; n = weight.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;dp&lt;&#x2F;span&gt;&lt;span&gt;(n + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;vector&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;(capacity + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;));
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;lt;= n; i++) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; w = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;; w &amp;lt;= capacity; w++) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(weight&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;= w) {
+&lt;&#x2F;span&gt;&lt;span&gt;        dp&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;w&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;max&lt;&#x2F;span&gt;&lt;span&gt;(dp&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;w&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;, dp&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;w - weight&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]] &lt;&#x2F;span&gt;&lt;span&gt;+ value&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;      } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;else &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        dp&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;w&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= dp&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;w&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; dp&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;capacity&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;digit-dp&quot;&gt;Digit DP&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;number-of-digit-one&#x2F;&quot;&gt;LC 233. Number of Digit One&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;non-negative-integers-without-consecutive-ones&#x2F;&quot;&gt;LC 600. Non-negative Integers without Consecutive Ones&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;numbers-at-most-n-given-digit-set&#x2F;&quot;&gt;LC 902. Numbers At Most N Given Digit Set&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;numbers-with-repeated-digits&#x2F;&quot;&gt;LC 1012. Numbers With Repeated Digits&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;find-all-good-strings&#x2F;&quot;&gt;LC 1397. Find All Good Strings&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;count-of-integers&#x2F;description&#x2F;&quot;&gt;LC 2719. Count of Integers&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;0-n&quot;&gt;[0, n]&lt;&#x2F;h4&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;dp&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int i&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int mask&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;bool is_limit&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;bool is_num&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(i == len) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; is_num;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(!is_limit &amp;amp;&amp;amp; is_num &amp;amp;&amp;amp; memo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;!= -&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; memo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; ret = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(!is_num) {
+&lt;&#x2F;span&gt;&lt;span&gt;    ret = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(i + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, mask, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; up = is_limit &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;?&lt;&#x2F;span&gt;&lt;span&gt; s&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#839496;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#839496;&quot;&gt;&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;9&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; d = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;- is_num; d &amp;lt;= up; d++) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;((mask &amp;gt;&amp;gt; d &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;) == &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;      ret += &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;(i + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, mask | (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&amp;lt; d), is_limit &amp;amp;&amp;amp; d == up, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(!is_limit &amp;amp;&amp;amp; is_num) memo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= ret;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; ret;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;low-high&quot;&gt;[low, high]&lt;&#x2F;h4&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; align lead zero (optional)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; int n = num2.length();
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; num1 = string(n-num1.length(), &amp;#39;0&amp;#39;) + num1;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;dp&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int i&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int sum&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;bool limit_low&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;bool limit_high&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(sum &amp;gt; max_sum) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(i == n) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; sum &amp;gt;= min_sum;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(!limit_low &amp;amp;&amp;amp; !limit_high &amp;amp;&amp;amp; memo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;sum&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;!= -&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; memo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;sum&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; low = limit_low &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;?&lt;&#x2F;span&gt;&lt;span&gt; num1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#839496;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#839496;&quot;&gt;&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; high = limit_high &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;?&lt;&#x2F;span&gt;&lt;span&gt; num2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#839496;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#839496;&quot;&gt;&amp;#39; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;9&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; ret = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; d = low; d &amp;lt;= high; d++) {
+&lt;&#x2F;span&gt;&lt;span&gt;    ret = (ret + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;dfs&lt;&#x2F;span&gt;&lt;span&gt;(i+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, sum+d, limit_low &amp;amp;&amp;amp; d == low, limit_high &amp;amp;&amp;amp; d == high)) % mod;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(!limit_low &amp;amp;&amp;amp; !limit_high) memo&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;sum&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= ret;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; ret;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;graph&quot;&gt;Graph&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;shortest-path&quot;&gt;Shortest Path&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;bfs-breadth-first-traversal&quot;&gt;BFS (Breadth-First Traversal)&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;shortest-path-visiting-all-nodes&#x2F;&quot;&gt;LC 847. Shortest Path Visiting All Nodes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;validate-binary-tree-nodes&#x2F;?envType=daily-question&amp;amp;envId=2023-10-16&quot;&gt;LC 1361. Validate Binary Tree Nodes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;bus-routes&#x2F;&quot;&gt;LC 815. Bus Routes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;bfs&lt;&#x2F;span&gt;&lt;span&gt;(vector&amp;lt;vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;graph&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; n = graph.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;  queue&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; q;
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;bool&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;vis&lt;&#x2F;span&gt;&lt;span&gt;(n, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;  q.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;push&lt;&#x2F;span&gt;&lt;span&gt;(start);
+&lt;&#x2F;span&gt;&lt;span&gt;  vis&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;start&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(!q.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;empty&lt;&#x2F;span&gt;&lt;span&gt;()) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; c = q.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;front&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;    q.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;pop&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; adj &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; graph&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;c&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(!vis&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;adj&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;        q.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;push&lt;&#x2F;span&gt;&lt;span&gt;(adj);
+&lt;&#x2F;span&gt;&lt;span&gt;        vis&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;adj&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;dijkstra&quot;&gt;Dijkstra&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;design-graph-with-shortest-path-calculator&#x2F;&quot;&gt;LC 2642. Design Graph With Shortest Path Calculator&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;number-of-ways-to-arrive-at-destination&#x2F;&quot;&gt;LC 1976. Number of Ways to Arrive at Destination&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;dijkstra&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int n&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int start&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int end&lt;&#x2F;span&gt;&lt;span&gt;, vector&amp;lt;vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;edges&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; build graph
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;vector&amp;lt;pair&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;graph&lt;&#x2F;span&gt;&lt;span&gt;(n);
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;auto &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span&gt;edge &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; edges) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; from = edge&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;, to = edge&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;, cost = edge&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    graph&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;from&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;push_back&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;make_pair&lt;&#x2F;span&gt;&lt;span&gt;(to, cost));
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;dist&lt;&#x2F;span&gt;&lt;span&gt;(n, INT_MAX);
+&lt;&#x2F;span&gt;&lt;span&gt;  priority_queue&amp;lt;vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;, vector&amp;lt;vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;, greater&amp;lt;vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; pq;
+&lt;&#x2F;span&gt;&lt;span&gt;  pq.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;push&lt;&#x2F;span&gt;&lt;span&gt;({&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;, start}); &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; cost, node
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(!pq.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;empty&lt;&#x2F;span&gt;&lt;span&gt;()) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; curr_cost = pq.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;top&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; curr_node = pq.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;top&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    pq.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;pop&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(curr_cost &amp;gt; dist&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;curr_node&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;continue&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(curr_node == end) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; curr_cost;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;auto &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span&gt;neighbor &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; graph&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;curr_node&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; next_node = neighbor.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;first&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; next_cost = curr_cost + neighbor.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;second&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(next_cost &amp;lt; dist&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;next_node&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;        dist&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;next_node&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= next_cost;
+&lt;&#x2F;span&gt;&lt;span&gt;        pq.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;push&lt;&#x2F;span&gt;&lt;span&gt;({next_cost, next_node});
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;floyd-warshall&quot;&gt;Floyd–Warshall&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;design-graph-with-shortest-path-calculator&#x2F;&quot;&gt;LC 2642. Design Graph With Shortest Path Calculator&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;floyd&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int n&lt;&#x2F;span&gt;&lt;span&gt;, vector&amp;lt;vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;edges&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;long&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;matrix&lt;&#x2F;span&gt;&lt;span&gt;(n, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;vector&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;long&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;(n, INT_MAX));
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;lt; n; i++) {
+&lt;&#x2F;span&gt;&lt;span&gt;    matrix&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;auto &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span&gt;edge &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; edges) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; from = edge&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;, to = edge&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;, cost = edge&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    matrix&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;from&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;to&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= cost;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; k = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; k &amp;lt; n; k++) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;lt; n; i++) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; j = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; j &amp;lt; n; j++) {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;long&lt;&#x2F;span&gt;&lt;span&gt; tmp = matrix&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;k&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;+ matrix&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;k&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        matrix&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;min&lt;&#x2F;span&gt;&lt;span&gt;(matrix&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;, tmp);
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;topological-sort&quot;&gt;Topological Sort&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;sort-items-by-groups-respecting-dependencies&#x2F;&quot;&gt;LC 1203. Sort Items by Groups Respecting Dependencies&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;collect-coins-in-a-tree&#x2F;description&#x2F;&quot;&gt;LC 2603. Collect Coins in a Tree&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;parallel-courses-iii&#x2F;description&#x2F;&quot;&gt;LC 2050. Parallel Courses III&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span&gt;vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;topologicalSort&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int n&lt;&#x2F;span&gt;&lt;span&gt;, vector&amp;lt;vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;edges&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;graph&lt;&#x2F;span&gt;&lt;span&gt;(n, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;vector&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;(n));
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;indegree&lt;&#x2F;span&gt;&lt;span&gt;(n);
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;auto &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span&gt;edge &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; edges) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; u = edge&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;, v = edge&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    graph&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;u&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;emplace_back&lt;&#x2F;span&gt;&lt;span&gt;(v);
+&lt;&#x2F;span&gt;&lt;span&gt;    indegree&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;v&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;++;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  queue&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; Q;
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; ret;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;lt; n; i++) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(indegree&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;      Q.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;push&lt;&#x2F;span&gt;&lt;span&gt;(i);
+&lt;&#x2F;span&gt;&lt;span&gt;      ret.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;push_back&lt;&#x2F;span&gt;&lt;span&gt;(i);
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(!Q.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;empty&lt;&#x2F;span&gt;&lt;span&gt;()) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; size = Q.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;lt; size; i++) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; u = Q.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;front&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;      Q.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;pop&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; v &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; graph&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;u&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(--indegree&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;v&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;          Q.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;push&lt;&#x2F;span&gt;&lt;span&gt;(v);
+&lt;&#x2F;span&gt;&lt;span&gt;          ret.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;push_back&lt;&#x2F;span&gt;&lt;span&gt;(v);
+&lt;&#x2F;span&gt;&lt;span&gt;        }
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; ret;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;union-find&quot;&gt;Union Find&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;validate-binary-tree-nodes&#x2F;?envType=daily-question&amp;amp;envId=2023-10-16&quot;&gt;LC 1361. Validate Binary Tree Nodes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;UnionFind &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;private&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; parent; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; Parent array to represent sets
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; rank;   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; Rank to optimize union by rank
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;public&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;UnionFind&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int n&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    parent.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;resize&lt;&#x2F;span&gt;&lt;span&gt;(n);
+&lt;&#x2F;span&gt;&lt;span&gt;    rank.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;resize&lt;&#x2F;span&gt;&lt;span&gt;(n, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;lt; n; i++) {
+&lt;&#x2F;span&gt;&lt;span&gt;      parent&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= i; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; Initialize each element as a separate set
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;find&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int x&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(parent&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;x&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;== x) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; x;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; parent&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;x&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;find&lt;&#x2F;span&gt;&lt;span&gt;(parent&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;x&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;); &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; Path compression
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;bool &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;unionSets&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int x&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int y&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; rootX = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;find&lt;&#x2F;span&gt;&lt;span&gt;(x);
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; rootY = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;find&lt;&#x2F;span&gt;&lt;span&gt;(y);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(rootX == rootY) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; Elements are already in the same set
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; Union by rank to keep the tree flat
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(rank&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;rootX&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;&amp;lt; rank&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;rootY&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;      parent&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;rootX&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= rootY;
+&lt;&#x2F;span&gt;&lt;span&gt;    } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;else if &lt;&#x2F;span&gt;&lt;span&gt;(rank&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;rootX&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; rank&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;rootY&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;      parent&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;rootY&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= rootX;
+&lt;&#x2F;span&gt;&lt;span&gt;    } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;else &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;      parent&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;rootY&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= rootX;
+&lt;&#x2F;span&gt;&lt;span&gt;      rank&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;rootX&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;++;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; Elements were successfully united
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;};
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;prefix-sum&quot;&gt;Prefix Sum&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;two-dimension-prefix-sum&quot;&gt;Two-dimension Prefix Sum&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;number-of-ways-of-cutting-a-pizza&#x2F;description&#x2F;&quot;&gt;LC 1444. Number of Ways of Cutting a Pizza&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;MatrixSum &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;private&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; sum;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;public&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;MatrixSum&lt;&#x2F;span&gt;&lt;span&gt;(vector&amp;lt;string&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;maxtrix&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; n = maxtrix.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; m = maxtrix&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;    sum = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;vector&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;(n + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;vector&lt;&#x2F;span&gt;&lt;span&gt;(m + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;));
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;lt; n; i++) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; j = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; j &amp;lt; m; j++) {
+&lt;&#x2F;span&gt;&lt;span&gt;        sum&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;j+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= sum&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;+ sum&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;j+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;- sum&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;+ (maxtrix&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;*   返回左上角在 (r1,c1) 右下角在 (r2-1,c2-1) 的子矩阵元素和   *&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;query&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int r1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int c1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int r2&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int c2&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; sum&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;r2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;c2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;- sum&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;r2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;c1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;- sum&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;r1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;c2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;+ sum&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;r1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;c1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;};
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;sliding-window&quot;&gt;Sliding Window&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;maximum-sum-of-3-non-overlapping-subarrays&#x2F;description&#x2F;&quot;&gt;LC 689. Maximum Sum of 3 Non-Overlapping Subarrays&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;slidingWindow&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;const&lt;&#x2F;span&gt;&lt;span&gt; vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;nums&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int k&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; n = nums.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; Initialize variables for the sliding window
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; left = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;, right = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; Other variables based on the problem requirements
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(right &amp;lt; n) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; Expand the window to the right
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; Modify other variables based on the problem requirements
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; Check if the window size is greater than k
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;* Check if the window size is greater than k *&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; Shrink the window from the left
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; Modify other variables based on the problem requirements
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; Update the result if needed
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; Move the window to the right
+&lt;&#x2F;span&gt;&lt;span&gt;    ++right;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;stack&quot;&gt;Stack&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;monotonic-stack&quot;&gt;Monotonic Stack&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;remove-duplicate-letters&#x2F;&quot;&gt;LC 316. Remove Duplicate Letters&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;maximum-score-of-a-good-subarray&#x2F;&quot;&gt;LC 1793. Maximum Score of a Good Subarray&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;maximum-sum-queries&#x2F;description&#x2F;&quot;&gt;LC 2736. Maximum Sum Queries&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;monotonicStack&lt;&#x2F;span&gt;&lt;span&gt;(vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;nums&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  stack&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; st;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; num &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; nums) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; if you want to keep a monotonically increasing stack
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; replace `num &amp;lt; st.top()` with `num &amp;gt; st.top()`
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(!st.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;empty&lt;&#x2F;span&gt;&lt;span&gt;() &amp;amp;&amp;amp; num &amp;lt; st.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;top&lt;&#x2F;span&gt;&lt;span&gt;()) {
+&lt;&#x2F;span&gt;&lt;span&gt;      st.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;pop&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; since num is greater or equal to st.top()
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; stack structure is first in last out
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; so, we will get the greatest num at the top
+&lt;&#x2F;span&gt;&lt;span&gt;    st.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;push&lt;&#x2F;span&gt;&lt;span&gt;(num);
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;string&quot;&gt;String&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;lcs-the-longest-common-subsequence&quot;&gt;LCS (The Longest Common Subsequence)&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;minimum-ascii-delete-sum-for-two-strings&#x2F;&quot;&gt;LC 712. Minimum ASCII Delete Sum for Two Strings&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;LCS&lt;&#x2F;span&gt;&lt;span&gt;(string &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;s1&lt;&#x2F;span&gt;&lt;span&gt;, string &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;s2&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; n = s1.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; m = s2.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;dp&lt;&#x2F;span&gt;&lt;span&gt;(n + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;vector&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;(m + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;));
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;lt;= s1.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;(); i++) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; j = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;; j &amp;lt;= s2.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;(); j++) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(s1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;== s2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;j-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;        dp&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= dp&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;j-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;else &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        dp&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;min&lt;&#x2F;span&gt;&lt;span&gt;(dp&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;j&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;, dp&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;j-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;) + &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; dp&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;m&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;tree&quot;&gt;Tree&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;lca-lowest-common-ancestor&quot;&gt;LCA (Lowest Common Ancestor)&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;kth-ancestor-of-a-tree-node&#x2F;&quot;&gt;LC 1483. Kth Ancestor of a Tree Node&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;minimum-edge-weight-equilibrium-queries-in-a-tree&#x2F;&quot;&gt;LC 2846. Minimum Edge Weight Equilibrium Queries in a Tree&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;TreeAncestor &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;private&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; depth;
+&lt;&#x2F;span&gt;&lt;span&gt;  vector&amp;lt;vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; pa;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;public&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;TreeAncestor&lt;&#x2F;span&gt;&lt;span&gt;(vector&amp;lt;pair&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;edges&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; n = edges.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; m = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;32 &lt;&#x2F;span&gt;&lt;span&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;__builtin_clz&lt;&#x2F;span&gt;&lt;span&gt;(n); &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; the length of binary n
+&lt;&#x2F;span&gt;&lt;span&gt;    vector&amp;lt;vector&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;g&lt;&#x2F;span&gt;&lt;span&gt;(n);
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;auto [&lt;&#x2F;span&gt;&lt;span&gt;a, b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; edges) {
+&lt;&#x2F;span&gt;&lt;span&gt;      g&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;a&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;push_back&lt;&#x2F;span&gt;&lt;span&gt;(b);
+&lt;&#x2F;span&gt;&lt;span&gt;      g&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;push_back&lt;&#x2F;span&gt;&lt;span&gt;(a);
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    depth.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;resize&lt;&#x2F;span&gt;&lt;span&gt;(n);
+&lt;&#x2F;span&gt;&lt;span&gt;    pa.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;resize&lt;&#x2F;span&gt;&lt;span&gt;(n, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;vector&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;(m, -&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;));
+&lt;&#x2F;span&gt;&lt;span&gt;    function&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt;)&amp;gt; dfs = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; x, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; parent) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;      pa&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;x&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= parent;
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; next &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; g&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;x&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(next != parent) {
+&lt;&#x2F;span&gt;&lt;span&gt;          depth&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;next&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= depth&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;x&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;dfs&lt;&#x2F;span&gt;&lt;span&gt;(next, x);
+&lt;&#x2F;span&gt;&lt;span&gt;        }
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;    };
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;dfs&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;, -&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;lt; m - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;; i++) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; x = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; x &amp;lt; n; x++) {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; p = pa&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;x&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(p != -&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;) pa&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;x&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;i+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= pa&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;p&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;get_kth_ancestor&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int node&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int k&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;while &lt;&#x2F;span&gt;&lt;span&gt;(k &amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;      node = pa&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;node&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;__builtin_clz&lt;&#x2F;span&gt;&lt;span&gt;(k)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      k &amp;amp;= k - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; make the lowbit set to 0
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; node;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;get_cla&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int x&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int y&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(depth&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;x&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; depth&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;y&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;swap&lt;&#x2F;span&gt;&lt;span&gt;(x, y);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    y = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;get_kth_ancestor&lt;&#x2F;span&gt;&lt;span&gt;(y, depth&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;y&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;- depth&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;x&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;); &lt;&#x2F;span&gt;&lt;span style=&quot;color:#93a1a1;&quot;&gt;&#x2F;&#x2F; make x and y in the same depth
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(x == y) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; x;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; i = pa&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;x&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;size&lt;&#x2F;span&gt;&lt;span&gt;() - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;; i &amp;gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;; i--) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; px = pa&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;x&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;, py = pa&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;y&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span&gt;i&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(px != py) {
+&lt;&#x2F;span&gt;&lt;span&gt;        x = px;
+&lt;&#x2F;span&gt;&lt;span&gt;        y = py;
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; pa&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;x&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;][&lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;};
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;prefix-tree-trie&quot;&gt;Prefix Tree (Trie)&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;leetcode.cn&#x2F;problems&#x2F;extra-characters-in-a-string&#x2F;&quot;&gt;LC 2707. Extra Characters in a String&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#cb4b16;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#839496;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;iostream&lt;&#x2F;span&gt;&lt;span style=&quot;color:#839496;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#cb4b16;&quot;&gt;#include &lt;&#x2F;span&gt;&lt;span style=&quot;color:#839496;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;unordered_map&lt;&#x2F;span&gt;&lt;span style=&quot;color:#839496;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;TrieNode &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;public&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;bool&lt;&#x2F;span&gt;&lt;span&gt; is_word;
+&lt;&#x2F;span&gt;&lt;span&gt;  std::unordered_map&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;char&lt;&#x2F;span&gt;&lt;span&gt;, TrieNode &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; children;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;TrieNode&lt;&#x2F;span&gt;&lt;span&gt;() : &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;is_word&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;) {}
+&lt;&#x2F;span&gt;&lt;span&gt;};
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;Trie &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;private&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  TrieNode &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span&gt;root;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;deleteTrie&lt;&#x2F;span&gt;&lt;span&gt;(TrieNode &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;node&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(node) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;auto &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span&gt;kv &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; node-&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;children&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;deleteTrie&lt;&#x2F;span&gt;&lt;span&gt;(kv.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;second&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;delete&lt;&#x2F;span&gt;&lt;span&gt; node;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;public&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;Trie&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;    root = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;new &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;TrieNode&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;~Trie&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;deleteTrie&lt;&#x2F;span&gt;&lt;span&gt;(root);
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;insert&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;const&lt;&#x2F;span&gt;&lt;span&gt; std::string &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;word&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    TrieNode &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span&gt;current = root;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;char&lt;&#x2F;span&gt;&lt;span&gt; c &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; word) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(current-&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;children&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;find&lt;&#x2F;span&gt;&lt;span&gt;(c) == current-&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;children&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;end&lt;&#x2F;span&gt;&lt;span&gt;()) {
+&lt;&#x2F;span&gt;&lt;span&gt;        current-&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;children[&lt;&#x2F;span&gt;&lt;span&gt;c&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;] &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;new &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;TrieNode&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;      current = current-&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;children[&lt;&#x2F;span&gt;&lt;span&gt;c&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    current-&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;is_word &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;bool &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;search&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;const&lt;&#x2F;span&gt;&lt;span&gt; std::string &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;word&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    TrieNode &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span&gt;current = root;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;char&lt;&#x2F;span&gt;&lt;span&gt; c &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; word) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(current-&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;children&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;find&lt;&#x2F;span&gt;&lt;span&gt;(c) == current-&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;children&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;end&lt;&#x2F;span&gt;&lt;span&gt;()) {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;      current = current-&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;children[&lt;&#x2F;span&gt;&lt;span&gt;c&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; current-&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;is_word&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;bool &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;start_with&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;const&lt;&#x2F;span&gt;&lt;span&gt; std::string &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;prefix&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    TrieNode &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span&gt;current = root;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;char&lt;&#x2F;span&gt;&lt;span&gt; c &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span&gt; prefix) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(current-&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;children&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;find&lt;&#x2F;span&gt;&lt;span&gt;(c) == current-&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;children&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;end&lt;&#x2F;span&gt;&lt;span&gt;()) {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;      }
+&lt;&#x2F;span&gt;&lt;span&gt;      current = current-&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;children[&lt;&#x2F;span&gt;&lt;span&gt;c&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;};
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        
+    </entry>
+</feed>

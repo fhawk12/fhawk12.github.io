@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>fhawk12&#x27;s blog</title>
+</head>
+<body>
+  <header class="nav-bar">
+    
+<nav>
+  <ul>
+    
+    <li><a href="&#x2F;posts">posts</a></li>
+    
+    <li><a href="&#x2F;tags">tags</a></li>
+    
+    <li><a href="&#x2F;archive">archive</a></li>
+    
+  </ul>
+</nav>
+
+
+  </header>
+  <main class="content">
+    
+
+<h1 class="title">
+  Repair Grub Boot
+</h1>
+<p class="subtitle"><strong>2023-09-18</strong></p>
+
+
+
+<p>Many times, especailly after linux resizes the partition, it will appear when booting</p>
+<pre data-lang="bash" style="background-color:#fdf6e3;color:#657b83;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#b58900;">error</span><span> : unknow filesystem
+</span><span style="color:#b58900;">grub</span><span> rescue&gt;
+</span></code></pre>
+<p>This is indicates that your grub configuration file is broken due to partition adjustment or partition UUID change, and grub cannot start normally. Thus entering the repair mode (grub rescue), also known as rescue mode.</p>
+<p>Only a few commands are available in rescue mode: ls, insmod, root, prefix, set</p>
+<ul>
+<li>set: show environment variables</li>
+<li>ls: display the partition specified</li>
+<li>insmod: load module</li>
+<li>root: set boot the system partition</li>
+<li>prefix: set grub booting path</li>
+</ul>
+<h2 id="check-partition">Check Partition</h2>
+<p>Display all partition on your computer</p>
+<pre data-lang="bash" style="background-color:#fdf6e3;color:#657b83;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#b58900;">grub</span><span> rescue&gt; ls
+</span><span>(</span><span style="color:#b58900;">hd0</span><span>) (hd0,msdos9) (</span><span style="color:#b58900;">hd0,msdos8</span><span>) (hd0,msdos7) (</span><span style="color:#b58900;">hd0,msdos6</span><span>) (hd0,msdos5) (</span><span style="color:#b58900;">hd0,msdos2</span><span>) (hd0,msdos1)
+</span></code></pre>
+<h2 id="find-linux-grub">Find Linux Grub</h2>
+<p>If show <code>unknow filesystem</code>, just try next one by one until show the name of your folder and flies on screen</p>
+<pre data-lang="bash" style="background-color:#fdf6e3;color:#657b83;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#b58900;">grub</span><span> rescue&gt; ls (hd0,msdos1)</span><span style="color:#b58900;">/
+</span><span style="color:#b58900;">or
+</span><span style="color:#b58900;">grub</span><span> rescue&gt; ls (hd0,msdos1)</span><span style="color:#b58900;">/boot/grub
+</span></code></pre>
+<h2 id="modify-booting-partition">Modify Booting Partition</h2>
+<p>Assume your grub locates partition (hd0, msdos1)</p>
+<pre data-lang="bash" style="background-color:#fdf6e3;color:#657b83;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#b58900;">grub</span><span> rescue&gt; set root=(hd0,msdos1)
+</span><span style="color:#b58900;">grub</span><span> rescue&gt; set prefix=(hd0,msdos1)</span><span style="color:#b58900;">/boot/grub
+</span></code></pre>
+<h2 id="set-grub-to-normal-mode">Set Grub To Normal Mode</h2>
+<pre data-lang="bash" style="background-color:#fdf6e3;color:#657b83;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#b58900;">grub</span><span> rescue&gt; insmod normal
+</span><span style="color:#b58900;">grub</span><span> rescue&gt; normal
+</span></code></pre>
+<p>Now, you are in normal mode and can access your system</p>
+<h2 id="update-grub">Update Grub</h2>
+<pre data-lang="bash" style="background-color:#fdf6e3;color:#657b83;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#b58900;">sudo</span><span> update-grub
+</span><span style="color:#b58900;">sudo</span><span> grub-install /dev/sda
+</span></code></pre>
+
+
+
+  </main>
+</body>
+</html>

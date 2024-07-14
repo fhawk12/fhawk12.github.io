@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>fhawk12&#x27;s blog - git</title>
+    <link rel="self" type="application/atom+xml" href="https://fhawk12.github.io/tags/git/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://fhawk12.github.io/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-01-21T00:00:00+00:00</updated>
+    <id>https://fhawk12.github.io/tags/git/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Git Cannot Push</title>
+        <published>2024-01-21T00:00:00+00:00</published>
+        <updated>2024-01-21T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              fhawk12
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://fhawk12.github.io/posts/git-cannot-push/"/>
+        <id>https://fhawk12.github.io/posts/git-cannot-push/</id>
+        
+        <content type="html" xml:base="https://fhawk12.github.io/posts/git-cannot-push/">&lt;p&gt;when you execute the command &lt;code&gt;git push&lt;&#x2F;code&gt;, maybe will show the message&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;ssh:&lt;&#x2F;span&gt;&lt;span&gt; connect to host github.com port 22: Connection timed out fatal: Could not from remote repository.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;Please&lt;&#x2F;span&gt;&lt;span&gt; make sure you have the correct access rights
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;and&lt;&#x2F;span&gt;&lt;span&gt; the repository exists.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;add file to ~&#x2F;.ssh&#x2F;config and edit it to solve it&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fdf6e3;color:#657b83;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;Host&lt;&#x2F;span&gt;&lt;span&gt; github.com
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;Hostname&lt;&#x2F;span&gt;&lt;span&gt; ssh.github.com
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;Port&lt;&#x2F;span&gt;&lt;span&gt; 443
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;User&lt;&#x2F;span&gt;&lt;span&gt; git
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        
+    </entry>
+</feed>
