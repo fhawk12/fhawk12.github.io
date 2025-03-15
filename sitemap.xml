@@ -3,18 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2025-01-04T16:03:36+08:00</lastmod>
+    <lastmod>2025-02-15T23:09:07+08:00</lastmod>
+  </url><url>
+    <loc>/posts/</loc>
+    <lastmod>2025-02-15T23:09:07+08:00</lastmod>
+  </url><url>
+    <loc>/tags/svelte/</loc>
+    <lastmod>2025-02-15T23:09:07+08:00</lastmod>
+  </url><url>
+    <loc>/posts/svelte5-with-localstorage/</loc>
+    <lastmod>2025-02-15T23:09:07+08:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2025-02-15T23:09:07+08:00</lastmod>
   </url><url>
     <loc>/tags/git/</loc>
     <lastmod>2025-01-04T16:03:36+08:00</lastmod>
   </url><url>
     <loc>/posts/git-cant-push/</loc>
-    <lastmod>2025-01-04T16:03:36+08:00</lastmod>
-  </url><url>
-    <loc>/posts/</loc>
-    <lastmod>2025-01-04T16:03:36+08:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2025-01-04T16:03:36+08:00</lastmod>
   </url><url>
     <loc>/posts/archlinux-automatic-login/</loc>
